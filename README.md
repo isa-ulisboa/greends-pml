@@ -1,5 +1,5 @@
 # greends-pml
-Links and exercises for the course Practical Machine Learning, Green Data Science, 2o semester 2022/2023
+Links and exercises for the course Practical Machine Learning, Green Data Science, 2o semester 2023/2024
 
 ---
 Instructor: Manuel Campagnolo, ISA/ULisboa
