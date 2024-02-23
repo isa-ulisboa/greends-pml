@@ -6,6 +6,11 @@ Instructor: Manuel Campagnolo, ISA/ULisboa
 
 The course will follow a flipped classroom model. Work outside class will be based on the [Practical Deep Learning course](https://course.fast.ai/) and other Machine Learning resources. During classes, the notebooks (Python code) will be run on Google Colab.
 
+Links for other resources:
+  - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956)
+  - [Moodle ULisboa](https://elearning.ulisboa.pt/)
+  - [Kaggle](https://www.kaggle.com/)
+
 The main materials for the course are:
 
 - [Overview notebook](ML_overview_with_examples.ipynb) 
