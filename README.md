@@ -24,7 +24,7 @@ The main materials for the course are:
 Sessions:
   
   - **Introduction** (Feb 23, 2024)
-    - Examples of input data for machine learning problems: tabular data, images, text
+    - Examples of input data for machine learning problems: tabular data, images, text. See *Iris data set* example with the notebook [iris_regression_classification.ipynb](iris_regression_classification.ipynb)
     - Using Colab to run notebooks
     - Notebook adapted for Colab from [https://github.com/fastai/course22](https://github.com/fastai/course22):
       - [Lesson1_00_is_it_a_bird_creating_a_model_from_your_own_data.ipynb](Lesson1_00_is_it_a_bird_creating_a_model_from_your_own_data.ipynb), where one builds a classifier for images of birds and forests.
