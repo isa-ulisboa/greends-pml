@@ -8,7 +8,7 @@ The course will follow a flipped classroom model. Work outside class will be bas
 
 Links for other resources:
   - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956)
-  - [Moodle ULisboa](https://elearning.ulisboa.pt/)
+  - [Moodle ULisboa](https://elearning.ulisboa.pt/). The course is called *Aprendizagem Automática Aplicada*, with this [link](https://elearning.ulisboa.pt/user/index.php?id=8991). Students need to self-register in the course.
   - [Kaggle](https://www.kaggle.com/)
 
 The main materials for the course are:
@@ -34,7 +34,7 @@ Sessions:
     - Notebook adapted for Colab from [https://github.com/fastai/course22](https://github.com/fastai/course22):
       - [Lesson1_00_is_it_a_bird_creating_a_model_from_your_own_data.ipynb](Lesson1_00_is_it_a_bird_creating_a_model_from_your_own_data.ipynb), where one builds a classifier for images of birds and forests.
     - Assigments:
-      - create notebook on Colab to download images (to a Google Drive folder) with some prompt (e.g. 'corn leaf'), using a library other than `fastai` (e.g. some library that relies on DuckDuckGo or some other search engine). Each student should create a video (2' maximum) describing their code and showing that it runs on Colab, and submit the video until next Wednesday, Feb 28.
+      - Create notebook on Colab to download images (to a Google Drive folder) with some prompt (e.g. 'corn leaf'), using a library other than `fastai` (e.g. some library that relies on DuckDuckGo or some other search engine). Each student should create a video (2' maximum) describing their code and showing that it runs on Colab, and submit the video until next Wednesday, Feb 28.
       - Watch video: Lesson 1 of [Practical Deep Learning for Coders 2022](https://course.fast.ai/) 
     
 ---
