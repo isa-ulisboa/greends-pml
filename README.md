@@ -42,6 +42,7 @@ Sessions:
     - Basic concepts in Machine learning: model and *loss*, *gradient descent*, for a simple regression problem. See [Overview notebook](ML_overview_with_examples.ipynb) and the code for a [simple example with a quadratic function](Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb) adapted from the (Fastai 2022 course)[[https://github.com/fastai/course22](https://github.com/fastai/course22-web/tree/master/Lessons)].
     - Assignment:
       - Watch video: [MIT Introduction to Deep Learning | 6.S191, 2023 edition](https://www.youtube.com/watch?v=QDX-1M5Nj7s&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1&t=361s). There will be a questionnaire about some basic concepts discussed in the video.
+    - Suggestion: Adapt the code in [simple example with a quadratic function](Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb) to train a linear regression model $y=ax+b$ with just two parameters (inestad of the three parameters of the quadratic function in the example). Compare the $a,b$ values that are obtained by gradient descent after $N$ epochs considering the *MSE* (mean square error) loss function (instead of the *MAE* function in the example) with the optimal ordinary least square linear regression coefficients that you can obtain for instance by fitting a `LinearRegression` with `scikit-learn`.
     
 ---
 Some other useful links:
