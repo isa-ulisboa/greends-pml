@@ -8,7 +8,7 @@ The course will follow a flipped classroom model. Work outside class will be bas
 
 Links for other resources:
   - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956)
-  - [Moodle ULisboa](https://elearning.ulisboa.pt/). The course is called *Aprendizagem Automática Aplicada*, with this [link](https://elearning.ulisboa.pt/user/index.php?id=8991). Students need to self-register in the course.
+  - [Moodle ULisboa](https://elearning.ulisboa.pt/). The course is called *Practical Machine Learning*, with this [link](https://elearning.ulisboa.pt/course/view.php?id=8991). Students need to self-register in the course.
   - [Kaggle](https://www.kaggle.com/)
 
 The main materials for the course are:
