@@ -53,7 +53,7 @@ Sessions:
 Some other useful links:
 - [fastai documentation](https://docs.fast.ai/)
 - [AIquizzes](https://aiquizzes.com/)
-- [Harvard CS50 | Introduction to Programming with Python free course](https://pll.harvard.edu/course/cs50s-introduction-programming-python)
+- [Harvard CS50 : Introduction to Programming with Python free course](https://pll.harvard.edu/course/cs50s-introduction-programming-python)
 - [Walk with Fastai free version tutorial](https://walkwithfastai.com/)
 - [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)
 
