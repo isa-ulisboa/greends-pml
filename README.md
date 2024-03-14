@@ -45,6 +45,9 @@ Sessions:
     - Suggestion: Adapt the code in [simple example with a quadratic function](Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb) to train a linear regression model $y=ax+b$ with just two parameters (instead of the three parameters of the quadratic function in the example). Compare the $a,b$ values that are obtained by
       - gradient descent after $N$ epochs considering the *MSE* (mean square error) loss function (instead of the *MAE* function in the example), with
       - the optimal ordinary least square linear regression coefficients that you can obtain for instance by fitting a `LinearRegression` with `scikit-learn`.
+
+    - **Linear regression vs perceptron; train, test and validation sets** (Mar 15, 2024)
+      - The perceptron and the activation function;
     
 ---
 Some other useful links:
