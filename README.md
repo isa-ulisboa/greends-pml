@@ -47,7 +47,15 @@ Sessions:
       - the optimal ordinary least square linear regression coefficients that you can obtain for instance by fitting a `LinearRegression` with `scikit-learn`.
 
    -  **Linear regression vs perceptron; train, test and validation sets** (Mar 15, 2024)
-      - The perceptron and the activation function; forward propagation
+      - Discussion of the suggested assignment from last class
+      - Code for gradient descent using PyTorch
+      - The perceptron and gradient descent: and `iris` data set example with animation
+      - Mini-batch example
+      - Train and test data; overfitting
+      - Assignment: adapt the `Perceptron` class (in the script for the `iris` data) such that:
+          - It uses mini-batches;
+          - It computes and displays on the animation the loss over a test set.
+        Each student should create a video (4' maximum) describing the changes on the code and effect of the mini-batches on the seeach of the best solution, and submit the video until next Wednesday, Mar 27. 
     
 ---
 Some other useful links:
