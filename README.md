@@ -52,10 +52,10 @@ Sessions:
       - The perceptron and gradient descent: and `iris` data set example with animation
       - Mini-batch example
       - Train and test data; overfitting
-      - Assignment: adapt the `Perceptron` class (in the script for the `iris` data) such that:
+      - Assignment: adapt the `Perceptron` class in [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) such that:
           - It uses mini-batches;
           - It computes and displays on the animation the loss over a test set.
-        Each student should create a video (4' maximum) describing the changes on the code and effect of the mini-batches on the seeach of the best solution, and submit the video until next Wednesday, Mar 27. 
+        Each student should create a video (4' maximum) describing the changes on the code and effect of the mini-batches on the search of the best solution, and submit the video until next Wednesday, Mar 27. 
     
 ---
 Some other useful links:
