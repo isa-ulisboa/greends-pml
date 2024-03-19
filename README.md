@@ -54,7 +54,7 @@ Links for other resources:
       - It uses mini-batches;
       - It computes and displays (on the animation, similarly to the iterations) the loss over a test set.
   2. Backup assignment (if the student is not able to do assignment #1 above).  Find a real data set adequate for a (simple or multiple) regression problem. Adapt the script based on `PyTorch` discussed in class an available in [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to solve the problem. Discuss the train and test losses plots along iterations and indicate what are the best set of parameters (including number of epochs) that you found for the problem at hand.
-  3. Each student should create a video (4' maximum for #1 and 3' maximum for 2#) and submit the video until next Wednesday, Mar 27.
+  3. Each student should create a video (4' maximum for #1 and 3' maximum for 2#) and submit the video until next Thursday, Mar 21st, at noon.
 </details>
 
 ---
