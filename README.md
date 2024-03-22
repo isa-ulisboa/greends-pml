@@ -46,17 +46,30 @@ Links for other resources:
   
 - Discussion of the suggested assignment from last class
 - Code for gradient descent using PyTorch; epochs and batches
-- The perceptron and gradient descent: and `iris` data set example with animation
+- The perceptron and gradient descent: an `iris` data set example with animation
 - Mini-batch example
 - Train and test data; overfitting
 - Assignment:
   1. adapt the `Perceptron` class in [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to address the two following goals. Describe the changes on the code and the effect of using mini-batches on the search of the best solution, as an alternative to stochastic gradient descent.
       - It uses mini-batches;
       - It computes and displays (on the animation, similarly to the iterations) the loss over a test set.
-  2. Backup assignment (if the student is not able to do assignment #1 above).  Find a real data set adequate for a (simple or multiple) regression problem. Adapt the script based on `PyTorch` discussed in class an available in [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to solve the problem. Discuss the train and test losses plots along iterations and indicate what are the best set of parameters (including number of epochs) that you found for the problem at hand.
+  2. Backup assignment (if the student is not able to do assignment #1 above).  Find a real data set adequate for a (simple or multiple) regression problem. Adapt the script based on `PyTorch` discussed in class an available in [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to solve the problem. Discuss the train and test losses plots along iterations and indicate what is  the best set of parameters (including number of epochs) that you found for the problem at hand.
   3. Each student should create a video (4' maximum for #1 and 3' maximum for 2#) and submit the video until next Thursday, Mar 21st, at noon.
 </details>
 
+
+<details markdown="block">
+<summary> Regression vs classification problems; assessing ML performance (Mar 22, 2024): cross-entropy, confusion matrix, accuracy metrics</summary>
+  
+- Discussion of previous assignment from last class: example of gradient descent with mini batches for the `iris` data set;
+- Perceptron and convergence; linearly separable sets
+- Classification problems: scores and the *softmax* function; cross-entropy
+- Assessing ML performance: confusion matrix, accuracy metrics
+- Assignment:
+  - Adapt the *Perceptron* code for the Iris data to output the confusion matrix, using 20% of the data set for validation. Compute also the classification accuracy, precision, recall and F1-score for the solution.
+  - Each student should create a video (3' maximum) and submit the video and the link to the GitHub repository and the file where the modified script is available.
+  - Submission deadline: Wednesday, April 3rd.
+</details>
 ---
 
 <details markdown="block">
