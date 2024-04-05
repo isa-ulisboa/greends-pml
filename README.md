@@ -70,6 +70,21 @@ Links for other resources:
   - Each student should create a video (3' maximum) and submit the video and the link to the GitHub repository and the file where the modified script is available.
   - Submission deadline: Thursday, March 28.
 </details>
+
+<details markdown="block">
+<summary> Neural networks (April 5, 2024): an implementation with PyTorch</summary>
+  
+- Discussion of previous assignment;
+- Neural networks with $n$ layers
+- Model parameters: dropout, momentum, regularization, etc
+- Examples with `Iris` and `MNIST` data sets.
+- Assignment:
+  - Adapt the *Script that implements a neural network with PyTorch (over the iris or mnist datasets)* code available in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) such that it is implemented with `TensorFlow` instead of `PyTorch`. Adjust the parameters to try to obtain a global accuracy close to 90% for the `MNIST` dataset. 
+  - Each student should create a video (3' maximum) explaing which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
+  - Submission deadline: Wednesday, April 10.
+</details>
+
+
 ---
 
 <details markdown="block">
