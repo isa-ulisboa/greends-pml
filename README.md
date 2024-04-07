@@ -78,6 +78,7 @@ Links for other resources:
 - Neural networks with $n$ layers
 - Model parameters: dropout, momentum, regularization, etc
 - Examples with `Iris` and `MNIST` data sets.
+- Suggestion: watch Data Umbrella [video](https://www.youtube.com/watch?v=B5GHmm3KN2A) with Sebastian Raschka, which is a friendly **Introduction to PyTorch tutorial**, that revisits many things that were discussed in class. Sebastian Raschka is a author of the books *Python Machine Learning 3rd Edition* and *Machine Learning with PyTorch and Scikit-Learn*. In this video, the NN model is a convolutional model, and therefore it has a feature extration component (not yet discussed in class), followed by a multi layer perceptron component (already discussed in class: `nn.Sequential()`). The feature extration component that uses convolutions will be discussed in the next class, so the video is also a bit of an introduction for that.
 - Assignment:
   - Adapt the *Script that implements a neural network with PyTorch (over the iris or mnist datasets)* code available in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) such that it is implemented with `TensorFlow` instead of `PyTorch`. Adjust the parameters to try to obtain a global accuracy close to 90% for the `MNIST` dataset. 
   - Each student should create a video (3' maximum) explaing which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
