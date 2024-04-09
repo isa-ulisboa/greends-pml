@@ -65,6 +65,7 @@ Links for other resources:
 - Perceptron and convergence; linearly separable sets
 - Classification problems: scores and the *softmax* function; cross-entropy
 - Assessing ML performance: confusion matrix, accuracy metrics
+- Suggestion: watch the series of videos [https://www.3blue1brown.com/topics/neural-networks](https://www.3blue1brown.com/topics/neural-networks) which introduce neural networks in a pretty informal way, with very nice animations. The example that is used along the videos is from the `MNIST` database (Modified National Institute of Standards and Technology database), a large database of handwritten digits that is commonly used for training various image processing systems. Each example is a 28 by 28 image (784 pixels).
 - Assignment:
   - Adapt the *Perceptron* code for the Iris data available in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to output the confusion matrix, using 20% of the data set for validation. Compute also the classification accuracy, precision, recall and F1-score for the solution.
   - Each student should create a video (3' maximum) and submit the video and the link to the GitHub repository and the file where the modified script is available.
