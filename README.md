@@ -86,12 +86,24 @@ Links for other resources:
   - Submission deadline: Wednesday, April 10.
 </details>
 
+<details markdown="block">
+<summary> Convolutional Neural networks (April 12, 2024): parameters for convolutional layers ; an implementation with PyTorch</summary>
+  
+- Improving the PyTorch code for NNs (making it more modular)
+- Convolutional Neural networks
+- Parameters: kernel, padding, stride, pooling
+- Example of application for the `MNIST` data set.
+</details>
+
+
 
 ---
 
 <details markdown="block">
 <summary> Main on-line resources </summary>
 
+- PyTorch
+  - Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022. See the presentation [webpage](https://sebastianraschka.com/blog/2022/ml-pytorch-book.html) and [GitHub repository](https://github.com/rasbt/machine-learning-book)
 - Fast.ai
   - The lessons (videos by Jeremy Howard) available at [Practical Deep Learning for Coders 2022](https://course.fast.ai/): (1) Getting started, (2) Deployment; (3) Neural net foundations; (4) Natural Language (NLP); (5) From-scratch model; (6) Random forests; (7) Collaborative filtering; (8) Convolutions (CNNs). Summaries of the lessons are also available on that website.
   - The notebooks for the 2022 course lessons, available at [https://github.com/fastai/course22](https://github.com/fastai/course22-web/tree/master/Lessons): look for lesson#.qmd file that lists the resources for the corresponding lesson. 
