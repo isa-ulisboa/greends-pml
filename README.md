@@ -80,8 +80,8 @@ Links for other resources:
 - Model parameters: dropout, momentum, regularization, etc
 - Examples with `Iris` and `MNIST` data sets.
 - Suggestion: watch Data Umbrella [video](https://www.youtube.com/watch?v=B5GHmm3KN2A) with Sebastian Raschka, which is a friendly **Introduction to PyTorch tutorial**, that revisits many things that were discussed in class. Sebastian Raschka is a author of the books *Python Machine Learning 3rd Edition* and *Machine Learning with PyTorch and Scikit-Learn*. In this video, the NN model is a convolutional model to be applied to images, and therefore it has a feature extraction component (not yet discussed in class), followed by a multi layer perceptron component (already discussed in class). The additional feature extraction component that uses convolutions will be discussed in the next class, so the video is also a bit of an introduction to that.
-- Assignment:
-  - Adapt the *Script that implements a neural network with PyTorch (over the iris or mnist datasets)* code available in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) such that it is implemented with `TensorFlow` instead of `PyTorch`. Adjust the parameters to try to obtain a global accuracy close to 90% for the `MNIST` dataset. 
+- Assignment #5:
+  - Adapt the *Script that implements a neural network with PyTorch (over the iris or mnist datasets)* code available on [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) such that it is implemented with `TensorFlow` instead of `PyTorch`. Adjust the parameters to try to obtain a global accuracy close to 90% for the `MNIST` dataset. 
   - Each student should create a video (3' maximum) explaing which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
   - Submission deadline: Wednesday, April 10.
 </details>
@@ -93,9 +93,11 @@ Links for other resources:
 - Convolutional Neural networks
 - Parameters: kernel, padding, stride, pooling
 - Example of application for the `MNIST` data set.
+- Assignment #6:
+  - Adapt the *Script that implements a convolutional neural network with PyTorch over the mnist 8 by 8 practice data set* available on [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to classify images from the (CIFAR-10)[https://www.kaggle.com/c/cifar-10/] data set which contains 60000 32 by 32 color images. You need to access/download the data and you need to adjust the parameters in the model for the input and hidden layers. The CIFAR-10 images have 3 channels, H=32, and W=32. You are not supposed to use other pre-defined and pre-trained models as in many examples that you can find on-line but the model in the script. Getting a high accuracy is not a goal. The goal is to be able to adapt the code and explain in the video how you did it. Use a small number of epochs (start with only 5 perhaps) since training will take much longer than in the examples we have seen in class so far.
+  - Each student should create a video (3' maximum) explaing which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
+  - Submission deadline: Wednesday, April 24.
 </details>
-
-
 
 ---
 
