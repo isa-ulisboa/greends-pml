@@ -119,13 +119,11 @@ In the first session (*Introduction*) we discussed a short script in using the h
 Notebooks:
 - Lesson1_02_saving_a_basic_fastai_model.ipynb; short notebook that shows how to fine tune a pretrained model and save the fine tuned model as a pikkle file `.pkl`.
 - Lesson2_edited_book_02_production.ipynb; notebook for the bear example, where 1) images are downloaded from the web (as in assignment #1)
-- Assignment #7:
+- **Assignment #7**:
   - Create your own Hugging Face Place to deploy a classification model your created.
   - Each student should create a video (3' maximum) explaning how they used `gradio` the deployment,  and should submit the video and the link to file in their GitHub repository where the modified script is available.
   - Submission deadline: Wednesday, May 1st.
 </details>
-
-Watch video:
 
 ---
 
