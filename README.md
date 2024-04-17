@@ -4,9 +4,9 @@ Links and exercises for the course Practical Machine Learning, Green Data Scienc
 ---
 Instructor: Manuel Campagnolo, ISA/ULisboa
 
-The course will follow a flipped classroom model. Work outside class will be based on the [Practical Deep Learning course](https://course.fast.ai/) and other Machine Learning resources. During classes, the notebooks (Python code) will be run on Google Colab.
+The course will follow a flipped classroom model. Work outside class will be based on a range of Machine Learning resources including the book *Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022* and the [Practical Deep Learning course](https://course.fast.ai/) for higher level programming. During classes, the notebooks (Python code) will be run on Google Colab.
 
-Links for other resources:
+Links for class resources:
   - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956)
   - [Moodle ULisboa](https://elearning.ulisboa.pt/). The course is called *Practical Machine Learning*, with this [link](https://elearning.ulisboa.pt/course/view.php?id=8991). Students need to self-register in the course.
   - [Kaggle](https://www.kaggle.com/)
@@ -23,7 +23,7 @@ Links for other resources:
 - Notebook adapted for Colab from [https://github.com/fastai/course22](https://github.com/fastai/course22):
   - [Lesson1_00_is_it_a_bird_creating_a_model_from_your_own_data.ipynb](Lesson1_00_is_it_a_bird_creating_a_model_from_your_own_data.ipynb), where one builds a classifier for images of birds and forests.
 - Assigments:
-  - Create notebook on Colab to download images (to a Google Drive folder) with some prompt (e.g. 'corn leaf'), using a library other than `fastai` (e.g. some library that relies on DuckDuckGo or some other search engine). Each student should create a video (2' maximum) describing their code and showing that it runs on Colab, and submit the video until next Wednesday, Feb 28.
+  - **Assignment #1**: Create notebook on Colab to download images (to a Google Drive folder) with some prompt (e.g. 'corn leaf'), using a library other than `fastai` (e.g. some library that relies on DuckDuckGo or some other search engine). Each student should create a video (2' maximum) describing their code and showing that it runs on Colab, and submit the video until next Wednesday, Feb 28.
   - Watch video: Lesson 1 of [Practical Deep Learning for Coders 2022](https://course.fast.ai/) 
 
 </details>
@@ -49,7 +49,7 @@ Links for other resources:
 - The perceptron and gradient descent: an `iris` data set example with animation
 - Mini-batch example
 - Train and test data; overfitting
-- Assignment:
+- **Assignment #2**:
   1. adapt the `Perceptron` class in [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to address the two following goals. Describe the changes on the code and the effect of using mini-batches on the search of the best solution, as an alternative to stochastic gradient descent.
       - It uses mini-batches;
       - It computes and displays (on the animation, similarly to the iterations) the loss over a test set.
@@ -98,6 +98,27 @@ Links for other resources:
   - Each student should create a video (3' maximum) explaing which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
   - Submission deadline: Wednesday, April 24.
 </details>
+
+<details markdown="block">
+<summary> Higher level machine learning: fastai and gradio (April 24, 2024): accessing data, creating and training a model with fastai, saving and deploying models</summary>
+
+Now that we have seen how machine learning models are created and trained with PyTorch, we go back to higher level programming tools (like fastai) that make the process easier and more efficient. In class *Introduction*, thre was apointer to video Lesson 1 of [Practical Deep Learning for Coders 2022](https://course.fast.ai/) where data were gathered and a classifier was fine-tune to classify bird and forest images (you might watch it again to refresh ideas). The video in Lesson 2 "Deployment" in [Practical Deep Learning for Coders 2022](https://course.fast.ai/) uses the same techniques but goes further and cover new topics like 
+
+Notebooks:
+- Lesson1_02_saving_a_basic_fastai_model.ipynb; short notebook that shows how to fine tune a pretrained model and save the fine tuned model as a pikkle file `.pkl`.
+- Lesson2_edited_book_02_production.ipynb; notebook for the bear example, where 1) images are downloaded from the web (as in assignment #1)
+
+- Improving the PyTorch code for NNs (making it more modular)
+- Convolutional Neural networks
+- Parameters: kernel, padding, stride, pooling
+- Example of application for the `MNIST` data set.
+- Assignment #6:
+  - Adapt the *Script that implements a convolutional neural network with PyTorch over the mnist 8 by 8 practice data set* available on [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to classify images from the [CIFAR-10](https://www.kaggle.com/c/cifar-10/) data set which contains 60000 32 by 32 color images. You need to access/download the data and you need to adjust the model parameters for the input and hidden layers. The CIFAR-10 color images have 3 channels, H=32, and W=32. You are not supposed to use other pre-defined and pre-trained models as in many examples that you can find on-line. You're expected to adapt the model in the script. Getting a high accuracy is not a goal. The goal is to be able to adapt the code and explain in the video how you did it. Use a small number of epochs (start with only 5 perhaps) since training will take much longer than in the examples we have seen in class so far.
+  - Each student should create a video (3' maximum) explaing which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
+  - Submission deadline: Wednesday, April 24.
+</details>
+
+Watch video:
 
 ---
 
