@@ -83,7 +83,7 @@ The main goal of this session is to understand how one can evaluate the accuracy
 <details markdown="block">
 <summary> Neural networks (April 5, 2024): an implementation with PyTorch</summary>
 
-In this session we extend the *perceptron* to a more complex model with multiple layers, called a *neural network*. We discuss how a neural network can be created and trained with PyTorch. Two data sets are used to illustrate the construction: the tabular `Iris` data set that had been used before, and a more complex data set (`MNIST`) where examples are made of 8$\times$8 pixel images, but are just read as vectors of length 64, where spatial context is discarded.
+In this session we extend the *perceptron* to a more complex model with multiple layers, called a *neural network*. We discuss how a neural network can be created and trained with PyTorch. Two data sets are used to illustrate the construction: the tabular `Iris` data set that had been used before, and a more complex data set (`MNIST`) where examples are in images, but are just read as vectors of numbers in a similar tabular way to the `Iris` data set.
   
 - Discussion of previous assignment;
 - Neural networks with $n$ layers
@@ -99,7 +99,7 @@ In this session we extend the *perceptron* to a more complex model with multiple
 <details markdown="block">
 <summary> Convolutional Neural networks (April 12, 2024): parameters for convolutional layers ; an implementation with PyTorch</summary>
 
-In this session, we extend the model used in the previous session for the `MNIST` data set. Since the examples are images, it makes sense to explore the spatial context with each image. This can be done with convolution operations. Therefore, we add convolution and maxpool layers to the previous model and create a convolutional neural network using PyTorch.
+In this session, we improve on the model used in the previous session for the `MNIST` data set. Since the examples are images, it makes sense to explore the spatial context within each image. This can be done with convolutions over the images. Therefore, we add 2D-convolution and maxpool layers to the previous model and create a convolutional neural network using PyTorch.
 
 - Improving the PyTorch code for NNs (making it more modular)
 - Convolutional Neural networks
@@ -107,7 +107,7 @@ In this session, we extend the model used in the previous session for the `MNIST
 - Example of application for the `MNIST` data set.
 - **Assignment #6**:
   - Adapt the *Script that implements a convolutional neural network with PyTorch over the mnist 8 by 8 practice data set* available on [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to classify images from the [CIFAR-10](https://www.kaggle.com/c/cifar-10/) data set which contains 60000 32 by 32 color images. You need to access/download the data and you need to adjust the model parameters for the input and hidden layers. The CIFAR-10 color images have 3 channels, H=32, and W=32. You are not supposed to use other pre-defined and pre-trained models as in many examples that you can find on-line. You're expected to adapt the model in the script. Getting a high accuracy is not a goal. The goal is to be able to adapt the code and explain in the video how you did it. Use a small number of epochs (start with only 5 perhaps) since training will take much longer than in the examples we have seen in class so far.
-  - Each student should create a video (3' maximum) explaing which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
+  - Each student should create a video (3' maximum) explaning which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
   - Submission deadline: Wednesday, April 24.
 </details>
 
@@ -119,15 +119,10 @@ In the first session (*Introduction*) we discussed a short script in using the h
 Notebooks:
 - Lesson1_02_saving_a_basic_fastai_model.ipynb; short notebook that shows how to fine tune a pretrained model and save the fine tuned model as a pikkle file `.pkl`.
 - Lesson2_edited_book_02_production.ipynb; notebook for the bear example, where 1) images are downloaded from the web (as in assignment #1)
-
-- Improving the PyTorch code for NNs (making it more modular)
-- Convolutional Neural networks
-- Parameters: kernel, padding, stride, pooling
-- Example of application for the `MNIST` data set.
-- Assignment #6:
-  - Adapt the *Script that implements a convolutional neural network with PyTorch over the mnist 8 by 8 practice data set* available on [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) to classify images from the [CIFAR-10](https://www.kaggle.com/c/cifar-10/) data set which contains 60000 32 by 32 color images. You need to access/download the data and you need to adjust the model parameters for the input and hidden layers. The CIFAR-10 color images have 3 channels, H=32, and W=32. You are not supposed to use other pre-defined and pre-trained models as in many examples that you can find on-line. You're expected to adapt the model in the script. Getting a high accuracy is not a goal. The goal is to be able to adapt the code and explain in the video how you did it. Use a small number of epochs (start with only 5 perhaps) since training will take much longer than in the examples we have seen in class so far.
-  - Each student should create a video (3' maximum) explaing which were the major changes that were made on the script and submit the video and the link to file in their GitHub repository where the modified script is available.
-  - Submission deadline: Wednesday, April 24.
+- Assignment #7:
+  - Create your own Hugging Face Place to deploy a classification model your created.
+  - Each student should create a video (3' maximum) explaning how they used `gradio` the deployment,  and should submit the video and the link to file in their GitHub repository where the modified script is available.
+  - Submission deadline: Wednesday, May 1st.
 </details>
 
 Watch video:
