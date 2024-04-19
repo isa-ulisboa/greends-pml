@@ -33,7 +33,7 @@ The goal of the first class is to give an example of a complex machine learning 
 <details markdown="block">
 <summary> Basic concepts (Mar 1, 2024): model, loss, gradient descent </summary>
 
-The goal of the following classes up to April 12 is to understand how deep learning models can be trained and used to solve regression and classification problems. We start by applying the machine learning approach to well-known statistical problems like linear regression to illustrate the stepwise approach followed in ML.
+The goal of the following classes up to April 12 is to understand how deep learning models can be trained and used to solve regression and classification problems. We start by applying the machine learning approach to well-known statistical problems like linear regression to illustrate the stepwise approach followed in ML. We use synthetic data generated from a linear or quadratic regression, where one can control the underlying model and the amout of noise. Then, we consider the  `Iris` tabular data set with 4 explanatory variables and categorical label that can be one of three species.
 
 - Discussion of the proposed solutions for the assignment of the previous class
 - Basic concepts in Machine learning: model and *loss*, *gradient descent*, for a simple regression problem. See [Overview notebook](ML_overview_with_examples.ipynb) and see the code for a simple example with a quadratic function in notebook [Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb](Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb). This note book is adapted from the (Fastai 2022 course) [https://github.com/fastai/course22](https://github.com/fastai/course22-web/tree/master/Lessons).
@@ -83,7 +83,7 @@ The main goal of this session is to understand how one can evaluate the accuracy
 <details markdown="block">
 <summary> Neural networks (April 5, 2024): an implementation with PyTorch</summary>
 
-In this session we extend the *perceptron* to a more complex model with multiple layers, called a *neural network*. We discuss how a neural network can be created and trained with PyTorch. Two data sets are used to illustrate the construction: the tabular `Iris` data set that had been used before, and a more complex data set (`MNIST`) where examples are in images, but are just read as vectors of numbers in a similar tabular way to the `Iris` data set.
+In this session we extend the *perceptron* to a more complex model with multiple layers, called a *neural network*. We discuss how a neural network can be created and trained with PyTorch. Two data sets are used to illustrate the construction: the tabular `Iris` data set that had been used before, and a more complex data set (`MNIST`) where examples are images, but at this point are read just as vectors of numbers in a similar tabular way to the `Iris` data set.
   
 - Discussion of previous assignment;
 - Neural networks with $n$ layers
@@ -97,7 +97,7 @@ In this session we extend the *perceptron* to a more complex model with multiple
 </details>
 
 <details markdown="block">
-<summary> Convolutional Neural networks (April 12, 2024): parameters for convolutional layers ; an implementation with PyTorch</summary>
+<summary> Convolutional neural networks (April 12, 2024): parameters for convolutional layers ; an implementation with PyTorch</summary>
 
 In this session, we improve on the model used in the previous session for the `MNIST` data set. Since the examples are images, it makes sense to explore the spatial context within each image. This can be done with convolutions over the images. Therefore, we add 2D-convolution and maxpool layers to the previous model and create a convolutional neural network using PyTorch.
 
@@ -112,16 +112,16 @@ In this session, we improve on the model used in the previous session for the `M
 </details>
 
 <details markdown="block">
-<summary> Higher level machine learning: fastai and gradio (April 24, 2024): accessing data, creating and training a model with fastai, saving and deploying models</summary>
+<summary> Higher level deep learning (April 24, 2024): accessing data, creating and training a model with fastai, saving and deploying models with gradio</summary>
 
-In the first session (*Introduction*) we discussed a short script in using the high level package `fastai` to implement a pre-trained convolutional neural network and apply it to classify images downloaded from the internet. Now that we have seen how machine learning models are created and trained with PyTorch, we go back to higher level programming tools (like fastai) that make the process easier and more efficient. In session *Introduction*, it was suggested watching video Lesson 1 of [Practical Deep Learning for Coders 2022](https://course.fast.ai/) where the classifier was fine-tune to classify bird and forest images (you might watch it again to refresh ideas). The video in Lesson 2 "Deployment" in [Practical Deep Learning for Coders 2022](https://course.fast.ai/) uses the same techniques but goes further and cover new topics like 
+In the first session (*Introduction*) we discussed a short script using the high level package `fastai` to implement a pre-trained convolutional neural network and apply it to classify images downloaded from the internet. Now that we have seen how machine learning models are created and trained with PyTorch, we go back to higher level programming tools (like `fastai`) that make the process easier and more efficient. In session *Introduction*, it was suggested watching video Lesson 1 of [Practical Deep Learning for Coders 2022](https://course.fast.ai/) where the classifier was fine-tune to classify bird and forest images (you might watch it again to refresh ideas). The video in Lesson 2 "Deployment" in [Practical Deep Learning for Coders 2022](https://course.fast.ai/) uses the same techniques but goes further and cover new topics like 
 
 Notebooks:
 - Lesson1_02_saving_a_basic_fastai_model.ipynb; short notebook that shows how to fine tune a pretrained model and save the fine tuned model as a pikkle file `.pkl`.
-- Lesson2_edited_book_02_production.ipynb; notebook for the bear example, where 1) images are downloaded from the web (as in assignment #1)
+- Lesson2_edited_book_02_production.ipynb; notebook for the bear example, where 1) images are downloaded from the web (as in assignment #1); 2) the data set is cleaned; 3) the model is fine tuned and saved;
 - **Assignment #7**:
   - Create your own Hugging Face Place to deploy a classification model your created.
-  - Each student should create a video (3' maximum) explaning how they used `gradio` the deployment,  and should submit the video and the link to file in their GitHub repository where the modified script is available.
+  - Each student should create a video (3' maximum) explaning how they saved their model, and how they used `gradio` for deployment, and the files and application in their Hugging Face Place. Submit the video and the link to the following files in their GitHub repository: (1) python code that creates and saves the model; (2) python script using gradio for the deployment; (3) URL of the Hugging Face Place where the model is deployed.
   - Submission deadline: Wednesday, May 1st.
 </details>
 
