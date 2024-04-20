@@ -7,13 +7,13 @@ Instructor: Manuel Campagnolo, ISA/ULisboa
 The course will follow a flipped classroom model. Work outside class will be based on a range of Machine Learning resources including the book *Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022* and the [Practical Deep Learning course](https://course.fast.ai/) for higher level programming. During classes, the notebooks (Python code) will be run on Google Colab.
 
 Links for class resources:
-  - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956)
-  - [Moodle ULisboa](https://elearning.ulisboa.pt/). The course is called *Practical Machine Learning*, with this [link](https://elearning.ulisboa.pt/course/view.php?id=8991). Students need to self-register in the course.
-  - [Kaggle](https://www.kaggle.com/)
+  - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956). Academic page, where final results will be posted.
+  - [Moodle ULisboa](https://elearning.ulisboa.pt/). Evaluation: assignments and questionnaires. The course is called *Practical Machine Learning*, with this [link](https://elearning.ulisboa.pt/course/view.php?id=8991). Students need to self-register in the course.
+  - [Kaggle](https://www.kaggle.com/). Access to data; candidate problems for the final project.
 
-[Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) 
+[Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) This notebook provides an overview of the full course and contains pointers for other sources of relevant information and Python scripts.
 
-**Sessions:**
+**Sessions:** Each description below includes the summary of the topics covered in the session, as well as the description of assignments and links to videos or other materials that students should work through.
 
 <details markdown="block">
 <summary> Introduction (Feb 23, 2024) </summary>
