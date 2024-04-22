@@ -112,16 +112,25 @@ In this session, we improve on the model used in the previous session for the `M
 </details>
 
 <details markdown="block">
-<summary> Higher level deep learning (April 24, 2024): accessing data, creating and training a model with fastai, saving and deploying models with gradio</summary>
+<summary> Transfer learning (April 24, 2024): using and fine-tuning pre-trained models</summary>
 
-In the first session (*Introduction*) we discussed a short script using the high level package `fastai` to implement a pre-trained convolutional neural network and apply it to classify images downloaded from the internet. Now that we have seen how machine learning models are created and trained with PyTorch, we go back to higher level programming tools (like `fastai`) that make the process easier and more efficient. 
+We have seen how machine learning models are created and trained with PyTorch. However, when applying our model (e.g. a CNN) to a bigger data set (e.f. CIFAR10) we encounter several problems like: 
+1. the accuracy is low because the model is not good enough,
+2. training from scratch requires a lot of computational resources.
 
-In session *Introduction*, it was suggested watching video Lesson 1 of [Practical Deep Learning for Coders 2022](https://course.fast.ai/) where the classifier was fine-tuned to classify bird and forest images (you may want to watch it again to refresh ideas). The video in Lesson 2 "Deployment" in [Practical Deep Learning for Coders 2022](https://course.fast.ai/) uses the same techniques but goes further and cover new topics like gathering data, cleaning data, creating and training a convolutional neural network, saving and deploying the model for production.
+Similarly to the first session (*Introduction*) where we discussed a short script using the high level package `fastai` to implement a pre-trained convolutional neural network and apply it to classify images downloaded from the internet, we will adapt the code we discussed earlier to read and improve a pre-trained model. Here, we will see how to access a pre-trained model in PyTorch, and fine-tuned it to our data set. This will address both concerns listed above.
 
-Notebooks:
-- Lesson1_02_saving_a_basic_fastai_model.ipynb; short notebook that shows how to fine tune a pretrained model and save the fine tuned model as a pikkle file `.pkl`.
-- Lesson2_edited_book_02_production.ipynb; notebook for the bear example, where 1) images are downloaded from the web (as in assignment #1); 2) the data set is cleaned; 3) the model is fine tuned and saved;
 - **Assignment #7**:
+  - to do
+  - Each student should create a video (3' maximum) explaning how .... Submit the video and the link to the following files in their GitHub repository:
+  - Submission deadline: Wednesday, May 1st.
+
+</details>
+
+<details markdown="block">
+<summary> Production (May 3, 2024): saving and deploying models with gradio</summary>
+
+- **Assignment #8**:
   - Create your own Hugging Face Place to deploy a classification model your created.
   - Each student should create a video (3' maximum) explaning how they saved their model, and how they used `gradio` for deployment, and the files and application in their Hugging Face Place. Submit the video and the link to the following files in their GitHub repository: (1) python code that creates and saves the model; (2) python script using gradio for the deployment; (3) URL of the Hugging Face Place where the model is deployed.
   - Submission deadline: Wednesday, May 1st.
