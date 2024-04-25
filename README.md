@@ -120,9 +120,10 @@ We have seen how machine learning models are created and trained with PyTorch. H
 
 Similarly to the first session (*Introduction*) where we discussed a short script using the high level package `fastai` to implement a pre-trained convolutional neural network and apply it to classify images downloaded from the internet, we will adapt the code we discussed earlier to read and improve a pre-trained model. Here, we will see how to access a pre-trained model in PyTorch, and fine-tuned it to our data set. This will address both concerns listed above.
 
-- **Assignment #7**:
-  - to do
-  - Each student should create a video (3' maximum) explaning how .... Submit the video and the link to the following files in their GitHub repository:
+- **Assignment #7** (identification of corn diseases):
+  - Read carefully the code in https://www.kaggle.com/code/emrearslan123/corn-leaf-disease-detection-with-resnet-pytorch which classifies with high precision images of corn leaves into 4 classes: *Blight*, *Common_Rust*, *Gray_Leaf_Spot* and *Healthy*;
+  - Implement the code either on Colab or on your own machine and compare the results in that notebook with yours;
+  - Create a video (3' maximum) explaning the main novelties in that code in comparison to what was discussed in class. Submit the video the link to your script either in your GitHub repository or on Colab; report your precision estimated (you can just copy/paste the output of `classification_report(test.targets, all_preds)`).
   - Submission deadline: Wednesday, May 1st.
 
 </details>
