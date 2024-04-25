@@ -114,7 +114,7 @@ In this session, we improve on the model used in the previous session for the `M
 <details markdown="block">
 <summary> Transfer learning (April 24, 2024): using and fine-tuning pre-trained models</summary>
 
-We have seen how machine learning models are created and trained with PyTorch. However, when applying our model (e.g. a CNN) to a bigger data set (e.f. CIFAR10) we encounter several problems like: 
+We have seen how machine learning models are created and trained with PyTorch. However, when applying our model (e.g. a CNN) to a larger data set (e.f. CIFAR10) we encounter several problems like: 
 1. the accuracy is low because the model is not good enough,
 2. training from scratch requires a lot of computational resources.
 
