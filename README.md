@@ -120,6 +120,8 @@ We have seen how machine learning models are created and trained with PyTorch. H
 
 Similarly to the first session (*Introduction*) where we discussed a short script using the high level package `fastai` to implement a pre-trained convolutional neural network and apply it to classify images downloaded from the internet, we will adapt the code we discussed earlier to read and improve a pre-trained model called `Resnet18`. Here, we will see how to access a pre-trained model in PyTorch, and fine-tuned it to our data set. This will address both concerns listed above.
 
+- Transfer learning: watch [video bt Andrew Ng](https://www.youtube.com/watch?v=yofjFQddwHE); discuss with an example how to adapt and fine tune a `Resnet18` model to classify the CIFAR-10 data set.
+
 - **Assignment #7** (identification of corn diseases):
   - Read carefully the notebook  [corn leaf disease](https://www.kaggle.com/code/emrearslan123/corn-leaf-disease-detection-with-resnet-pytorch) which classifies with high precision images of corn leaves into 4 classes: *Blight*, *Common_Rust*, *Gray_Leaf_Spot* and *Healthy*;
   - Implement that code or some similar code either on Colab or on your own machine and compare the your results with the results reported in the notebook for the same *corn diseases* data set; If you're not able to run it on GPU on Colab, you might try to run it on CPU on your own laptop/desktop for a few epochs;
