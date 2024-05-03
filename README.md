@@ -4,7 +4,7 @@ Links and exercises for the course Practical Machine Learning, Green Data Scienc
 ---
 Instructor: Manuel Campagnolo, ISA/ULisboa
 
-The course will follow a flipped classroom model. Work outside class will be based on a range of Machine Learning resources including the book *Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022* and the [Practical Deep Learning course](https://course.fast.ai/) for higher level programming. During classes, the notebooks (Python code) will be run on Google Colab.
+The course will follow a flipped classroom model. Work outside class will be based on a range of Machine Learning resources including the book *Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022*. During classes, the notebooks (Python code) will be run on Google Colab.
 
 Links for class resources:
   - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956). Academic page, where final results will be posted.
@@ -134,10 +134,13 @@ Similarly to the first session (*Introduction*) where we discussed a short scrip
 <details markdown="block">
 <summary> Production (May 3, 2024): saving and deploying models with gradio</summary>
 
-- **Assignment #8**:
-  - Create your own Hugging Face Place to deploy a classification model your created.
-  - Each student should create a video (3' maximum) explaning how they saved their model, and how they used `gradio` for deployment, and the files and application in their Hugging Face Place. Submit the video and the link to the following files in their GitHub repository: (1) python code that creates and saves the model; (2) python script using gradio for the deployment; (3) URL of the Hugging Face Place where the model is deployed.
-  - Submission deadline: Wednesday, May 1st.
+
+- Discussion of *assignment #7*. Check the proposed [Colab notebook for the problem](corn_leaf_disease_detection_with_resnet_pytorch.ipynb). In particular, it was discussed how to save the deep learning model so it can be deployed.
+- Create your own Hugging Face space;
+- Create an interactive app that runs locally and can also be deployed on your Hugging Face space that reads an image and returns the size of that image;
+- How to create an app on Hugging Face spaces for the deployment of the classifier trained and saved in *assignment #7*. See code in [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb). Check also the links included in that notebook about deploying models with `Gradio`.
+- **Assignment #8**: 
+  - Each student should create a video (3' maximum) explaning how they saved their model, and how they used `gradio` and Hugging Face spaces for deployment. Submit the video and the link to your public Hugging Face space repository where files can be read, i.e. a link like (https://huggingface.co/spaces/mcampagnolo/test2024/tree/main). It is expected that you explain how you obtained the model file and the other files you had to upload to Hugging Face, and which files had to be created so your app would run. You are encouraged to make changes on your app to improve it. Submission deadline: Wednesday, May 8st.
 </details>
 
 ---
