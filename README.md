@@ -143,6 +143,18 @@ Similarly to the first session (*Introduction*) where we discussed a short scrip
   - Each student should create a video (3' maximum) explaning how they saved their model, and how they used `gradio` and Hugging Face spaces for deployment. Submit the video and the link to your public Hugging Face space repository where files can be read, i.e. a link like (https://huggingface.co/spaces/mcampagnolo/test2024/tree/main). It is expected that you explain how you obtained the model file and the other files you had to upload to Hugging Face, and which files had to be created so your app would run. You are encouraged to make changes on your app to improve it. Submission deadline: Wednesday, May 8st.
 </details>
 
+
+<details markdown="block">
+<summary> Tabular data (May 10, 2024): preprocess tabular data</summary>
+
+
+- Discussion of  *assignment #7* and *assignment #8*.
+- Brief discussion about (not free) platforms for machine learning (ML) like [Vertex AI](https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform),  [MS Azure](https://azure.microsoft.com/en-us/products/machine-learning), [AWS Sagemaker](https://aws.amazon.com/sagemaker/), etc.
+- Tabular data:
+  - Pre-processing with `pandas`and `sklearn`: See Chap 4 notebook at [https://github.com/rasbt/machine-learning-book/](https://github.com/rasbt/machine-learning-book/) and an application to the *Wine* data set [https://archive.ics.uci.edu/dataset/109/wine](https://archive.ics.uci.edu/dataset/109/wine).
+  - Assignment (to be submitted later). Access the *Wine quality* data set [https://archive.ics.uci.edu/dataset/186/wine+quality](https://archive.ics.uci.edu/dataset/186/wine+quality) and organize the data so you can define two different response variables: color (white or red) and quality (score between 0 and 10). Explore the data as in the *Wine*  example.
+</details>
+
 ---
 
 <details markdown="block">
