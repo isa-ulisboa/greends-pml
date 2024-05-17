@@ -159,7 +159,7 @@ Similarly to the first session (*Introduction*) where we discussed a short scrip
 <summary> Data visualization for classification and feature engineering (May 17, 2024): preprocess and visualize tabular data</summary>
   
 - Final projet description
-- Discuss notebook that applies dimensionality reduction techniques (t-SNE, UMAP, LDA) to three data sets.
+- Discuss *Script to apply dimensionality reduction techniques t-SNE, UMAP and LDA to several data sets*  in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb)
 - Pre-processing and feature engineering with `sklearn`. See example at (https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance.html) with the  `titanic` data set.
 - Processing pipelines
   
