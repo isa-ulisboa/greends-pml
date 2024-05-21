@@ -152,17 +152,27 @@ Similarly to the first session (*Introduction*) where we discussed a short scrip
 - Brief discussion about (not free) platforms for machine learning (ML) like [Vertex AI](https://cloud.google.com/vertex-ai/docs/start/introduction-unified-platform),  [MS Azure](https://azure.microsoft.com/en-us/products/machine-learning), [AWS Sagemaker](https://aws.amazon.com/sagemaker/), etc.
 - Tabular data:
   - Pre-processing with `pandas`and `sklearn`: See Chap 4 notebook at [https://github.com/rasbt/machine-learning-book/](https://github.com/rasbt/machine-learning-book/) and an application to the *Wine* data set [https://archive.ics.uci.edu/dataset/109/wine](https://archive.ics.uci.edu/dataset/109/wine).
-  - Assignment (to be submitted later). Access the *Wine quality* data set [https://archive.ics.uci.edu/dataset/186/wine+quality](https://archive.ics.uci.edu/dataset/186/wine+quality) and organize the data so you can define two different response variables: color (white or red) and quality (score between 0 and 10). Explore the data as in the *Wine*  example.
+  -  *Wine quality* data set [https://archive.ics.uci.edu/dataset/186/wine+quality](https://archive.ics.uci.edu/dataset/186/wine+quality) with two different response variables: color (white or red) and quality (score between 0 and 10). Explore the data as in the *Wine*  example.
 </details>
 
 <details markdown="block">
-<summary> Data visualization for classification and feature engineering (May 17, 2024): preprocess and visualize tabular data</summary>
+<summary> Feature engineering and data visualization (May 17, 2024): t-SNE, UMAP, processing pipeline</summary>
   
 - Final projet description
 - Discuss *Script to apply dimensionality reduction techniques t-SNE, UMAP and LDA to several data sets*  in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb)
 - Pre-processing and feature engineering with `sklearn`. See example [here](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance.html) with the  `titanic` data set.
 - Processing pipelines: See Chap 6 notebook at [https://github.com/rasbt/machine-learning-book/](https://github.com/rasbt/machine-learning-book/)
 - Brief description of the *decision tree* classifier.
+  
+</details>
+
+<details markdown="block">
+<summary> Random forests (May 23, 2024)</summary>
+  
+- Decision trees: see corresponding section in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb)
+- Ensemble methods and raandom forests: see corresponding section in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb)
+- See Chap 3 notebook at [https://github.com/rasbt/machine-learning-book/](https://github.com/rasbt/machine-learning-book/)
+
   
 </details>
 
