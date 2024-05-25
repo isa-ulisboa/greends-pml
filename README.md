@@ -174,8 +174,8 @@ Similarly to the first session (*Introduction*) where we discussed a short scrip
 - **Assignment #9**:
   - Consider the *wine quality data set*, where the response variable is *quality* and both red and white wines are included in the data set;
   - The goal is to predict the quality from the explanatory variables;
-  - You can/should preprocess the data and perform feature engineering;
-  - The goal is to develop a classifier with overall accuracy over the test set larger than 90% for the problem;
+  - You can preprocess the data and perform feature engineering;
+  - The goal is to develop a classifier with overall accuracy over the test set larger than 55% for the problem using all the original quality classes;
   - You should exhibit and discuss the confusion matrix over the test set;
   - You should also show and discuss a plot that shows how the overal accuracy varies with some parameter like `max_depth`, `max_leaf_nodes` or another parameter designed to avoid overfitting
   - Create a video (3' approx.) describing your script and your results according and submit the video and the link to the file in your GitHub repository where the script is available (Submission deadline: Thursday, May 30th, 2pm)
