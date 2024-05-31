@@ -183,6 +183,19 @@ Similarly to the first session (*Introduction*) where we discussed a short scrip
   
 </details>
 
+<details markdown="block">
+<summary> Gradient boosting and other ensamble techniques (May 30, 2024) AdaBoost and XGBoost; Variable importance; sklearn cheat sheet</summary>
+  
+- Discuss and complete the following `sklearn` cheat sheets:
+  - [more classifiers](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*UYY7a6lhjXNkiIE-2gx-0w.png) [(source)](https://medium.com/@chingizseyidbayli/most-common-python-libraries-cheat-sheets-pathlib-pandas-numpy-scikit-learn-matplotlib-3188d2407c79).
+  - [fewer classifiers and more detail](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/09/Python-Cheat-Sheet-for-Scikit-learn-Edureka.pdf)
+- AdaBoost and XGBoost: see corresponding section in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb)
+
+
+  
+</details>
+
+
 ---
 
 <details markdown="block">
