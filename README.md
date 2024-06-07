@@ -192,10 +192,21 @@ Similarly to the first session (*Introduction*) where we discussed a short scrip
 - AdaBoost and XGBoost ensemble classifiers: see corresponding section in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb)
 - Estimation of variable importance: Mean Decrease Impurity and Permutation Importance: see corresponding section in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb)
 
-
-  
 </details>
 
+
+</details>
+
+<details markdown="block">
+<summary> Model evaluation and hyperparameter tuning (June 7, 2024); K-fold cross-validation, grid search, ROC curve and AUC </summary>
+
+For the following topics, see Chap 6 notebook at [https://github.com/rasbt/machine-learning-book/](https://github.com/rasbt/machine-learning-book/) and corresponding sections in the [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb).
+- Using k-fold cross-validation to assess model performance;
+- Debugging algorithms with learning and validation curves;
+- Fine-tuning machine learning models via grid search;
+- Plotting a receiver operating characteristic.
+- Discussion of assignment #9
+</details>
 
 ---
 
