@@ -1,10 +1,10 @@
 # greends-pml
-Links and exercises for the course Practical Machine Learning, Green Data Science, 2o semester 2023/2024
+Links and exercises for the course Practical Machine Learning, Green Data Science, 2o semester 2024/2025
 
 ---
 Instructor: Manuel Campagnolo, ISA/ULisboa
 
-The course will follow a flipped classroom model. Work outside class will be based on a range of Machine Learning resources including the book *Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022*. During classes, the notebooks (Python code) will be run on Google Colab.
+The course will follow a mixed flipped classroom model, where students are supposed to work on suggested topics autonomously before classes. Work outside class will be based on a range of Machine Learning resources including the book *Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022*. During classes, the notebooks (Python code) will be run on Google Colab.
 
 Links for class resources:
   - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956). Academic page, where final results will be posted.
@@ -13,12 +13,14 @@ Links for class resources:
 
 [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) This notebook provides an overview of the full course and contains pointers for other sources of relevant information and Python scripts.
 
+---
+
 **Sessions:** Each description below includes the summary of the topics covered in the session, as well as the description of assignments and links to videos or other materials that students should work through.
 
 <details markdown="block">
-<summary> Introduction (Feb 23, 2024) </summary>
+<summary> Introduction (Feb 21, 2025) </summary>
 
-The goal of the first class is to give an example of a complex machine learning problem that can easily be solved using freely available resources. The example uses the high level machine learning package `fastai`.
+The goal of the first class is to give an introduction to ML and also to show some of the problems that can be addressed with the techniques and tools that will be discussed during the semester. The first examples will be run on Colab notebooks.
 
 - Examples of input data for machine learning problems: tabular data, images, text. See *Iris data set* example with the notebook [iris_regression_classification.ipynb](iris_regression_classification.ipynb)
 - Using Colab to run notebooks
@@ -29,6 +31,25 @@ The goal of the first class is to give an example of a complex machine learning 
   - Watch video: Lesson 1 of [Practical Deep Learning for Coders 2022](https://course.fast.ai/) 
 
 </details>
+
+--- 
+
+<details markdown="block">
+<summary> Main on-line resources </summary>
+- Basic resources:
+  - Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022. See the presentation [webpage](https://sebastianraschka.com/blog/2022/ml-pytorch-book.html) and [GitHub repository](https://github.com/rasbt/machine-learning-book)
+  - [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)
+- Tutorials:
+  - [MIT 6.S191: Introduction to Deep Learning (2023)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
+  - [Stanford Lecture Collection  Convolutional Neural Networks for Visual Recognition (2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Notes for the Stanford course on Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/)
+  - [Stanford Machine Learning Full Course led by Andrew Ng (2020)](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU). Led by Andrew Ng, this course provides a broad introduction to machine learning and statistical pattern recognition. Topics include: supervised learning (generative/discriminative learning, parametric/non-parametric learning, neural networks, support vector machines); unsupervised learning (clustering, dimensionality reduction, kernel methods); learning theory (bias/variance tradeoffs, practical advice); reinforcement learning and adaptive control.
+  - [Broderick: Machine Learning, MIT 6.036 Fall 2020](https://www.youtube.com/watch?v=ZOiBe-nrmc4); [Full lecture information and slides](http://tamarabroderick.com/ml.html)
+  
+
+</details>
+ 
+
+<!---
 
 <details markdown="block">
 <summary> Basic concepts (Mar 1, 2024): model, loss, gradient descent </summary>
@@ -208,32 +229,6 @@ For the following topics, see Chap 6 notebook at [https://github.com/rasbt/machi
 - Discussion of assignment #9
 </details>
 
----
+-->
 
-<details markdown="block">
-<summary> Main on-line resources </summary>
 
-- PyTorch
-  - Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022. See the presentation [webpage](https://sebastianraschka.com/blog/2022/ml-pytorch-book.html) and [GitHub repository](https://github.com/rasbt/machine-learning-book)
-- Fast.ai
-  - The lessons (videos by Jeremy Howard) available at [Practical Deep Learning for Coders 2022](https://course.fast.ai/): (1) Getting started, (2) Deployment; (3) Neural net foundations; (4) Natural Language (NLP); (5) From-scratch model; (6) Random forests; (7) Collaborative filtering; (8) Convolutions (CNNs). Summaries of the lessons are also available on that website.
-  - The notebooks for the 2022 course lessons, available at [https://github.com/fastai/course22](https://github.com/fastai/course22-web/tree/master/Lessons): look for lesson#.qmd file that lists the resources for the corresponding lesson. 
-  - The online book [Deep Learning for Coders with Fastai and PyTorch: AI Applications Without a PhD](https://course.fast.ai/Resources/book.html). The examples on the book are not always the examples in the lessons. 
-- Other Machine Learning resources:
-  - [MIT 6.S191: Introduction to Deep Learning (2023)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
-  - [Stanford Lecture Collection  Convolutional Neural Networks for Visual Recognition (2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Notes for the Stanford course on Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/)
-  - [Stanford Machine Learning Full Course led by Andrew Ng (2020)](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU). Led by Andrew Ng, this course provides a broad introduction to machine learning and statistical pattern recognition. Topics include: supervised learning (generative/discriminative learning, parametric/non-parametric learning, neural networks, support vector machines); unsupervised learning (clustering, dimensionality reduction, kernel methods); learning theory (bias/variance tradeoffs, practical advice); reinforcement learning and adaptive control.
-  - [Broderick: Machine Learning, MIT 6.036 Fall 2020](https://www.youtube.com/watch?v=ZOiBe-nrmc4); [Full lecture information and slides](http://tamarabroderick.com/ml.html)
-
-</details>
- 
-<details markdown="block">
-<summary> Some other useful links </summary>
-
-- [fastai documentation](https://docs.fast.ai/)
-- [AIquizzes](https://aiquizzes.com/)
-- [Harvard CS50 : Introduction to Programming with Python free course](https://pll.harvard.edu/course/cs50s-introduction-programming-python)
-- [Walk with Fastai free version tutorial](https://walkwithfastai.com/)
-- [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)
-
-</details>
