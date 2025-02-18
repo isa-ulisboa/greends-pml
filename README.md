@@ -24,7 +24,7 @@ The goal of the first class is to give an introduction to ML and also to show so
 
 - Types of machine learning problems: supervised learning, unsupervised learning, reinforcement learning.
 - Supervised learning: classification vs regression 
-- Examples of input data for machine learning problems: tabular data, images, text. See *Iris data set* example with the notebook [iris_regression_classification.ipynb](iris_regression_classification.ipynb)
+- Examples of input data for machine learning problems: tabular data, images, text. See *Iris data set* example with the notebook [iris_regression_classification.ipynb](https://github.com/isa-ulisboa/greends-pml/blob/main/iris_regression_classification.ipynb)
 
 </details>
 
