@@ -4,11 +4,11 @@ Links and exercises for the course Practical Machine Learning, Green Data Scienc
 ---
 Instructor: Manuel Campagnolo, ISA/ULisboa
 
-The course will follow a mixed flipped classroom model, where students are supposed to work on suggested topics autonomously before classes. Work outside class will be based on a range of Machine Learning resources including the book *Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022*. During classes, the notebooks (Python code) will be run on Google Colab.
+The course will follow a mixed flipped classroom model, where students are supposed to work on suggested topics autonomously before classes. Work outside class will be based on a range of Machine Learning resources including the book *Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022*. During classes, Python notebooks will be run on Google Colab.
 
 Links for class resources:
-  - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaap-283463546570956). Academic page, where final results will be posted.
-  - [Moodle ULisboa](https://elearning.ulisboa.pt/). Evaluation: assignments and questionnaires. The course is called *Practical Machine Learning*, with this [link](https://elearning.ulisboa.pt/course/view.php?id=8991). Students need to self-register in the course.
+  - [Fenix webpage](https://fenix.isa.ulisboa.pt/courses/aaapl-283463546572013). Course official page, where final results will be posted.
+  - [Moodle ULisboa](https://elearning.ulisboa.pt/). Evaluation: assignments. The course is called [Practical Machine Learning](https://elearning.ulisboa.pt/course/view.php?id=10469). Students need to self-register in the Moodle page for the course.
   - [Kaggle](https://www.kaggle.com/). Access to data; candidate problems for the final project.
 
 [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) This notebook provides an overview of the full course and contains pointers for other sources of relevant information and Python scripts.
@@ -22,13 +22,9 @@ Links for class resources:
 
 The goal of the first class is to give an introduction to ML and also to show some of the problems that can be addressed with the techniques and tools that will be discussed during the semester. The first examples will be run on Colab notebooks.
 
+- Types of machine learning problems: supervised learning, unsupervised learning, reinforcement learning.
+- Supervised learning: classification vs regression 
 - Examples of input data for machine learning problems: tabular data, images, text. See *Iris data set* example with the notebook [iris_regression_classification.ipynb](iris_regression_classification.ipynb)
-- Using Colab to run notebooks
-- Notebook adapted for Colab from [https://github.com/fastai/course22](https://github.com/fastai/course22):
-  - [Lesson1_00_is_it_a_bird_creating_a_model_from_your_own_data.ipynb](Lesson1_00_is_it_a_bird_creating_a_model_from_your_own_data.ipynb), where one builds a classifier for images of birds and forests.
-- Assigments:
-  - **Assignment #1**: Create notebook on Colab to download images (to a Google Drive folder) with some prompt (e.g. 'corn leaf'), using a library other than `fastai` (e.g. some library that relies on DuckDuckGo or some other search engine). Each student should create a video (2' maximum) describing their code and showing that it runs on Colab, and submit the video until next Wednesday, Feb 28.
-  - Watch video: Lesson 1 of [Practical Deep Learning for Coders 2022](https://course.fast.ai/) 
 
 </details>
 
