@@ -20,12 +20,13 @@ Links for class resources:
 <details markdown="block">
 <summary> Introduction (Feb 21, 2025) </summary>
 
-The goal of the first class is to give an introduction to ML and also to show some of the problems that can be addressed with the techniques and tools that will be discussed during the semester. The first examples will be run on Colab notebooks.
+The goal of the first class is to give an introduction to ML and also to show some of the problems that can be addressed with the techniques and tools that will be discussed during the semester. The examples will be run on Colab.
 
-- Types of machine learning problems: supervised learning, unsupervised learning, reinforcement learning.
+- Types of machine learning problems: supervised learning, unsupervised learning, reinforcement learning. Suggestion: check video [Types of machine learning](https://www.youtube.com/watch?v=gh6mNF2BGvk)
 - Supervised learning: classification vs regression 
 - Examples of input data for machine learning problems: tabular data, images, text. See *Iris data set* example with the notebook [iris_regression_classification.ipynb](https://github.com/isa-ulisboa/greends-pml/blob/main/iris_regression_classification.ipynb)
-
+- [Example of inference for regression over the Iris data set](https://github.com/isa-ulisboa/greends-pml/blob/main/iris_LM_inference.ipynb)
+- [Statistics vs Machine Learning: When to use stats vs. ML?](https://www.youtube.com/watch?v=xUsm34qnE30)
 </details>
 
 --- 
@@ -36,12 +37,12 @@ The goal of the first class is to give an introduction to ML and also to show so
   - Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili. Machine Learning with PyTorch and Scikit-Learn. Packt Publishing, 2022. See the presentation [webpage](https://sebastianraschka.com/blog/2022/ml-pytorch-book.html) and [GitHub repository](https://github.com/rasbt/machine-learning-book)
   - [https://pytorch.org/tutorials/](https://pytorch.org/tutorials/)
 - Tutorials:
-  - [MIT 6.S191: Introduction to Deep Learning (2023)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
+  - [NYU course: Data Science for Everyone](https://www.youtube.com/@jonesrooy)
+  - [MIT 6.S191: Introduction to Deep Learning (2024)](https://www.youtube.com/watch?v=ErnWZxJovaM)
   - [Stanford Lecture Collection  Convolutional Neural Networks for Visual Recognition (2017)](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) and [Notes for the Stanford course on Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/)
   - [Stanford Machine Learning Full Course led by Andrew Ng (2020)](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU). Led by Andrew Ng, this course provides a broad introduction to machine learning and statistical pattern recognition. Topics include: supervised learning (generative/discriminative learning, parametric/non-parametric learning, neural networks, support vector machines); unsupervised learning (clustering, dimensionality reduction, kernel methods); learning theory (bias/variance tradeoffs, practical advice); reinforcement learning and adaptive control.
   - [Broderick: Machine Learning, MIT 6.036 Fall 2020](https://www.youtube.com/watch?v=ZOiBe-nrmc4); [Full lecture information and slides](http://tamarabroderick.com/ml.html)
   
-
 </details>
  
 
