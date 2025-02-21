@@ -26,7 +26,8 @@ The goal of the first class is to give an introduction to ML and also to show so
 - Supervised learning: classification vs regression 
 - Examples of input data for machine learning problems: tabular data, images, text. See *Iris data set* example with the notebook [iris_regression_classification.ipynb](https://github.com/isa-ulisboa/greends-pml/blob/main/iris_regression_classification.ipynb)
 - [Example of inference for regression over the Iris data set](https://github.com/isa-ulisboa/greends-pml/blob/main/iris_LM_inference.ipynb)
-- [Statistics vs Machine Learning: When to use stats vs. ML?](https://www.youtube.com/watch?v=xUsm34qnE30)
+- Statistics vs Machine Learning: Check video: [When to use stats vs. ML?](https://www.youtube.com/watch?v=xUsm34qnE30)
+- An example of a prediction task for time series: check the notebook [modeling ground water levels](https://www.kaggle.com/code/andreshg/timeseries-analysis-a-complete-guide/) for the Kaggle competition [Acea Smart Water Analytics](https://www.kaggle.com/competitions/acea-water-prediction/). Try to download the data and run the notebook to reproduce the results. 
 </details>
 
 --- 
