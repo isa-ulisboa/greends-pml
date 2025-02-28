@@ -38,7 +38,7 @@ The goal of the following classes is to understand how ML models can be trained 
 - Video on the Perceptron and early times of AI [The First Neural Networks](https://www.youtube.com/watch?v=e5dVSygXbAE&t=88s)
 - Basic concepts in Machine learning: *model*, *fit*, *iterations* aka *epochs*, *loss*, *learning rate*, *perceptron*, parameters *weights*, for a simple regression problem. 
 - Consider the following pseudo-code to train a simple Linear Regression model. What is the *loss* function that we aim at minimizing? What is the strategy to reduce the *loss* in each iteration? Is there a risk of *over-fitting*?
-
+  
   ---
   Pseudo code for SGD (stochastic gradient descent) to fit a linear regression:
   - Dataset:  $D = {(x_1^{(i)}, ..., x_n^{(i)}, y^{(i)})}_{i=1}^N$  `N observations, n features`
@@ -54,7 +54,7 @@ The goal of the following classes is to understand how ML models can be trained 
         - $w_j$ := $w_j + \eta \cdot$ error $\cdot x_j$ # `Update weight (for each feature)`
   ---
 
-- Class assignment: Create a `LinearRegression` class with a `fit` method to implement the pseudo code above. Add to your class a `predict` method to make new predictions using the fitted model. Test your class with the following example.
+- Create a `LinearRegression` class with a `fit` method to implement the pseudo code above. Add to your class a `predict` method to make new predictions using the fitted model. Test your class with the following example.
     
   ```Python
   # Create synthetic data
@@ -69,7 +69,8 @@ The goal of the following classes is to understand how ML models can be trained 
   y_pred = model.predict(X_test)
   print(f"Prediction for X=0.5: {y_pred[0]}")
   ```
-  
+- Create an animation that shows the position of the fitted line for successive epochs for the example above.
+- How can you adapt the code to address a classification problem where the response $y$ can only be 0 or 1?
 </details>
 
 --- 
