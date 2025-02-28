@@ -30,6 +30,48 @@ The goal of the first class is to give an introduction to ML and also to show so
 - An example of a prediction task for time series: check the notebook [modeling ground water levels](https://www.kaggle.com/code/andreshg/timeseries-analysis-a-complete-guide/) for the Kaggle competition [Acea Smart Water Analytics](https://www.kaggle.com/competitions/acea-water-prediction/). Try to download the data and run the notebook to reproduce the results. 
 </details>
 
+<details markdown="block">
+<summary> Basic concepts (Feb 28, 2025): model, loss, fit, learning rate, perceptron, ... </summary>
+
+The goal of the following classes is to understand how ML models can be trained in and used to solve regression and classification problems. We start by applying the machine learning approach to well-known statistical problems like linear regression to illustrate the stepwise approach followed in ML. We use synthetic data generated from a linear or quadratic regression, where one can control the underlying model and the amout of noise. Then, we consider the  `Iris` tabular data set with 4 explanatory variables and categorical label that can be one of three species.
+
+- Video on the Perceptron and early times of AI [The First Neural Networks](https://www.youtube.com/watch?v=e5dVSygXbAE&t=88s)
+- Basic concepts in Machine learning: *model*, *fit*, *iterations* aka *epochs*, *loss*, *learning rate*, *perceptron*, parameters *weights*, for a simple regression problem. 
+- Consider the following pseudo-code to train a simple Linear Regression model. What is the *loss* function that we aim at minimizing? What is the strategy to reduce the *loss* in each iteration? Is there a risk of *over-fitting*?
+
+  ---
+  Pseudo code for SGD (stochastic gradient descent) to fit a linear regression:
+  - Dataset:  $D = {(x_1^{(i)}, ..., x_n^{(i)}, y^{(i)})}_{i=1}^N$  `N observations, n features`
+  - Learning rate:  $\eta$ `Small positive value`
+  - Max iterations: max_iter `Number of epochs`
+  - Initial weights $w$ := $(w_0, w_1, ..., w_n)$ `Typically, all zero`
+  - For iter := 1 to max_iter 
+    - For each  $(x_1, ..., x_n, y) \in D$  `Update weights after each example`
+      - $\hat{y}$ := $w_0 + w_1 x_1 + w_2 x_2 + \dots + w_n x_n$ `Predict response with current weights`
+      - error := $y-\hat{y}$
+      - $w_0$ := $w_0 + \eta \cdot$ error # `Update weight (bias)`
+      - For $j$ := 1 to $n$
+        - $w_j$ := $w_j + \eta \cdot$ error $\cdot x_j$ # `Update weight (for each feature)`
+  ---
+
+- Class assignment: Create a `LinearRegression` class with a `fit` method to implement the pseudo code above. Add to your class a `predict` method to make new predictions using the fitted model. Test your class with the following example.
+    
+  ```Python
+  # Create synthetic data
+  np.random.seed(0)
+  X = np.random.rand(100, 1) # array with 100 rows and 1 column (1 feature)
+  y = 2 + 3 * X + np.random.randn(100, 1) * 0.1
+  # Create and train the model
+  model = LinearRegression(learning_rate=0.1, max_iter=1000)
+  model.fit(X, y)
+  # Make predictions
+  X_test = np.array([[0.5]])
+  y_pred = model.predict(X_test)
+  print(f"Prediction for X=0.5: {y_pred[0]}")
+  ```
+  
+</details>
+
 --- 
 
 <details markdown="block">
@@ -51,20 +93,12 @@ The goal of the first class is to give an introduction to ML and also to show so
 
 <!---
 
-<details markdown="block">
-<summary> Basic concepts (Mar 1, 2024): model, loss, gradient descent </summary>
-
-The goal of the following classes up to April 12 is to understand how deep learning models can be trained and used to solve regression and classification problems. We start by applying the machine learning approach to well-known statistical problems like linear regression to illustrate the stepwise approach followed in ML. We use synthetic data generated from a linear or quadratic regression, where one can control the underlying model and the amout of noise. Then, we consider the  `Iris` tabular data set with 4 explanatory variables and categorical label that can be one of three species.
-
-- Discussion of the proposed solutions for the assignment of the previous class
-- Basic concepts in Machine learning: model and *loss*, *gradient descent*, for a simple regression problem. See [Overview notebook](ML_overview_with_examples.ipynb) and see the code for a simple example with a quadratic function in notebook [Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb](Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb). This note book is adapted from the (Fastai 2022 course) [https://github.com/fastai/course22](https://github.com/fastai/course22-web/tree/master/Lessons).
+See [Overview notebook](ML_overview_with_examples.ipynb) and see the code for a simple example with a quadratic function in notebook [Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb](Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb). This note book is adapted from the (Fastai 2022 course) [https://github.com/fastai/course22](https://github.com/fastai/course22-web/tree/master/Lessons).
 - Assignment:
   - Watch video: [MIT Introduction to Deep Learning 6.S191, 2023 edition](https://www.youtube.com/watch?v=QDX-1M5Nj7s&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1&t=361s). There will be a questionnaire (**Questionnaire #2**) about some basic concepts discussed in the video. Contents: 11:33​ Why deep learning?; 14:48​ The perceptron; 20:06​ Perceptron example; 23:14​ From perceptrons to neural networks; 29:34​ Applying neural networks;  32:29​ Loss functions;  35:12​ Training and gradient descent; 40:25​ Backpropagation; 44:05​ Setting the learning rate; 48:09​ Batched gradient descent; 51:25​ Regularization: dropout and early stopping; 57:16​ Summary
 - Suggestion: Adapt the code in the simple example with a quadratic function in notebook [Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb](Lesson3_edited_04-how-does-a-neural-net-really-work.ipynb) to train a linear regression model $y=ax+b$ with just two parameters (instead of the three parameters of the quadratic function in the example). Compare the $a,b$ values that are obtained by
   - gradient descent after $N$ epochs considering the *MSE* (mean square error) loss function (instead of the *MAE* function in the example), with
   - the optimal ordinary least square linear regression coefficients that you can obtain for instance by fitting a `LinearRegression` with `scikit-learn`.
-
-</details>
 
 <details markdown="block">
 <summary> Linear regression examples (Mar 15, 2024): epochs, perceptron, batches, train and test, overfitting</summary>
