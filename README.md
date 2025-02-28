@@ -41,6 +41,7 @@ The goal of the following classes is to understand how ML models can be trained 
   
   ---
   Pseudo code for SGD (stochastic gradient descent) to fit a linear regression:
+  
   - Dataset:  $D = {(x_1^{(i)}, ..., x_n^{(i)}, y^{(i)})}_{i=1}^N$  `N observations, n features`
   - Learning rate:  $\eta$ `Small positive value`
   - Max iterations: max_iter `Number of epochs`
@@ -52,6 +53,7 @@ The goal of the following classes is to understand how ML models can be trained 
       - $w_0$ := $w_0 + \eta \cdot$ error # `Update weight (bias)`
       - For $j$ := 1 to $n$
         - $w_j$ := $w_j + \eta \cdot$ error $\cdot x_j$ # `Update weight (for each feature)`
+          
   ---
 
 - Create a `LinearRegression` class with a `fit` method to implement the pseudo code above. Add to your class a `predict` method to make new predictions using the fitted model. Test your class with the following example.
