@@ -1,0 +1,2 @@
+
+1. Petrignano (Type: Aquifer). Description from (https://www.kaggle.com/competitions/acea-water-prediction/data): The wells field of the alluvial plain between Ospedalicchio di Bastia Umbra and Petrignano is fed by three underground aquifers separated by low permeability septa. The aquifer can be considered a water table groundwater and is also fed by the Chiascio river. The groundwater levels are influenced by the following parameters: rainfall, depth to groundwater, temperatures and drainage volumes, level of the Chiascio river.

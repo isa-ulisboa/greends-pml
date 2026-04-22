@@ -12,12 +12,19 @@ Links for class resources:
   - [Moodle ULisboa](https://elearning.ulisboa.pt/). Evaluation: assignments. The course is called [Practical Machine Learning](https://elearning.ulisboa.pt/course/view.php?id=10469). Students need to self-register in the Moodle page for the course.
   - [Kaggle](https://www.kaggle.com/). Access to data; candidate problems for the final project.
 
+Some recommended tutorials:
+  - [Scikit-Learn ML basic tutorial](https://www.youtube.com/playlist?list=PLSE7WKf_qqo0lmPLmigvXDTDcKcGhre32). This covers the basics of using package `sklearn` for  ML, including basics, core terminology , linear regression, logistic regression, accuracy, preprocessing, and pipelines.
+  - [Statistical Learning with Python - Stanford Online](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ). This is an introductory-level course in supervised learning, with a focus on regression and classification methods. The lectures cover all the material in An Introduction to Statistical Learning, with Applications in Python by James, Witten, Hastie, Tibshirani and Taylor (Springer, 2023).
+  - [MIT Introduction to Deep Learning](https://www.youtube.com/watch?v=alfdI7S6wCY)
+
 <!---
 [Overview notebook](https://github.com/isa-ulisboa/greends-pml/blob/main/ML_overview_with_examples.ipynb) This notebook provides an overview of the full course and contains pointers for other sources of relevant information and Python scripts.
 --->
 
 # Sessions
 Each description below includes the summary of the topics covered in the session, as well as the description of assignments and links to videos or other materials that students should work through.
+
+---
 
 <details markdown="block">
 <summary><a name="T0"></a> 0. Introduction (Feb 20, 2026) </summary>
@@ -42,6 +49,7 @@ We do an introduction to ML and compare it with *statistical modelling* using th
 <!--- An example of a prediction task for time series: check the notebook [modeling ground water levels](https://www.kaggle.com/code/andreshg/timeseries-analysis-a-complete-guide/) for the Kaggle competition [Acea Smart Water Analytics](https://www.kaggle.com/competitions/acea-water-prediction/). Try to download the data and run the notebook to reproduce the results. --->
 </details>
 
+---
 
 <details id= markdown="block">
 <summary><a name="T1"></a> 1. Basic concepts (Feb 27, 2026): model, loss, fit, learning rate, iterations, epochs </summary>
@@ -56,6 +64,8 @@ The goal of the following classes is to understand how ML models can be trained 
 - [Exercise](docs/T1_linear_regression_exercise_with_pseudo_code.md): consider the pseudo-code for the previous exercise, and relate it to concepts *loss function* and *stochastic gradient descent*.
 - Extend the optimization approach to a binary classification problem. See [Basic concepts notes](docs/T1_basic_concepts.md).
 </details>
+
+---
 
 <details markdown="block">
 <summary><a name="T2"></a> 2. Basic concepts (Mar 6, 2026): Classification, logistic regression, entropy and cross-entropy, regularization, batch size</summary>
@@ -136,47 +146,48 @@ The goal of the following classes is to understand how ML models can be trained 
   
 </details>
 
-<!---
-
-
+---
 
 <details markdown="block">
-<summary> Decision trees (Mar 14, 2025): entropy, over-fitting, train and development </summary>
+<summary> 3. Decision trees (Mar 13, 2026): decision trees for classification, information gain, over-fitting, train and development sets </summary>
 
+- Review structured code for the exercise of the previous class on [Breast Cancer Wisconsin data set](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data).
+    - Pipeline: train/test + pre-processing (scale features) + define model + fit Model + use model to predict;
+    - Other concepts: logistic regression; batch size, regularization parameter.
+- Discussion of [Assignment #1](notebooks/assign_1_wine_quality.ipynb). Keywords: input, output, model, loss function, epoch, batch, predict, train dataset, and (independent) test dataset.
 - See (Raschka et al, 2022), Chapter 3: Decision tree learning (pg 86-98)
-- See [Decision tree notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T2_decision_trees_overfitting_train_test.md)
-- How to grow a decision tree
-- What is entropy and how does it help us to find the best model? Check  the Princeton video on [Information Theory Basics](https://www.youtube.com/watch?v=bkLHszLlH34).
-- The risk of over-fitting: train and development sets
-- Decision tree hyper-parameters
-- Exercise: create a decision tree for the [Soil detection for cotton crop problem](https://www.kaggle.com/datasets/zohasohail/soil-detection-for-cotton-crop) and determine the best values for hyper-parameters Maximum depth and Minimum leaf size.
-- Comparing  last session (perceptron) with this session (decision tree):
+- See [Decision tree notes](docs/T3_decision_trees_overfitting_train_dev.md)
+- Check this video for an easy introduction to decision trees using `sklearn.tree.DecisionTreeClassifier`: [Pokemon classifier](https://www.youtube.com/watch?v=LLBGiAAZqAM)
+- The risk of over-fitting: train and development (validation) data sets
+- Decision tree hyper-parameters, e.g. `max_depth`
+- Exercise: create a decision tree classifier for the [Soil detection for cotton crop problem](https://www.kaggle.com/datasets/zohasohail/soil-detection-for-cotton-crop). Use as predictors `['ph', 'Temperature', 'Humidity', 'Density', 'Electrical Conductivity', 'N', 'P', 'K']` and as response `'Cotton Crop'`. Determine the best values for hyper-parameters Maximum depth and Minimum leaf size using a development (validation) set. Visualize the model with `plot_tree`. See [possible structure for the code](notebooks/T3_cotton_crop_problem_grid_search.ipynb). Note that `sklearn.tree.DecisionTreeClassifier` can only be applied to numerical features. If categorical features are available, they must be converted to numerical (typically using a one-hot encoder).
+- Comparision of logistic regression with decision trees for classification:
 
-| Class | Mar 7 | Mar 14
-|--- |--- |---
-| Model | Perceptron | Decision tree
-| Problem | regression | classification
-| Data set | train only | train and development
-| Hyper-parameters | learning rate, number iterations | tree depth, leaf size, ...
-| Risk of over-fitting | very low | very high
-| Loss function | $MSE=\frac{1}{n}\sum_{i=1}^n \left(y_i-\hat{y}_i\right)^2$ | entropy:  $H({\rm \bf p})=-\sum_{i=1}^n \hat{p}_i \log_2 \hat{p}_i$
-| Optimization | backpropagation (SGD) | brute force (try all features and all thresholds)
-| Python package | PyTorch | scikit learn
-
+| Model | Logistic Regression | Decision tree |
+| --- | --- | ---|
+| Problem | Classification | Classification |
+| Hyper-parameters | learning rate, number iterations, ... | tree depth, leaf size, ... |
+| Risk of over-fitting | low | high |
+| Loss function | cross entropy: $-\log\_2\hat{p}\_i$, $i$ is the actual label | Gini, or entropy:  $-\sum_{i=1}^n\hat{p}\_i\log\_2\hat{p}\_i$ |
+| Optimization | Gradient descent | Brute force (try all features and all thresholds) |
   
 </details>
 
+---
+
+
 <details markdown="block">
-<summary> Data preprocessing (Mar 21, 2025): pipelines, missing data, categorical features, scaling, train and test </summary>
+<summary> 4. Data preprocessing (Mar 20, 2026): pipelines, missing data, categorical features, scaling</summary>
 
 - See (Raschka et al, 2022), Chapter 4 (Data Preprocessing) and Chapter 6 (Streamlining workflows with pipelines)
+- See [Scikit-Learn ML basic tutorial](https://www.youtube.com/playlist?list=PLSE7WKf_qqo0lmPLmigvXDTDcKcGhre32), sections 12, 13, 14 and 15.
 - Supervised learning flowchart
   <details markdown="block">
   <summary>Figure 1.9 (Raschka et al, 2022) </summary>
   <img src="https://github.com/isa-ulisboa/greends-pml/blob/main/docs/supervised_learning_flowchart_raschka_2022.png" alt="Alt Text" width="600" >
   </details>
-- The Titanic data set example: See [Pre-processing notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T3_missing_data_categorical_scaling.md)
-- Dealing with missing data;
+- The Titanic data set example: See [Pre-processing notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T4_missing_data_categorical_scaling.md)
+- Removing and imputing missing values from the data set
 - Handling categorical data;
 - Bringing features onto the same scale;
 - Partitioning a dataset into separate training and test datasets;
@@ -188,37 +199,48 @@ The goal of the following classes is to understand how ML models can be trained 
 - Exercise: apply the principles and code discussed above to the Montesinho burned area data set. You can convert the problem into a classification problem by categorizing the original response variable (burned area). See [Pre-processing notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T3_missing_data_categorical_scaling.md)
 </details>
 
+---
+
 <details markdown="block">
-<summary>Model Evaluation and hyper-parameter Tuning (Mar 28, 2025): cross-validation, strata and groups, grid-search </summary>
+<summary>5. Model Evaluation and hyper-parameter Tuning (Mar 27, 2026): cross-validation, strata and groups, grid-search </summary>
 
 - See (Raschka et al, 2022), Chapter 6: Learning Best Practices for Model Evaluation and hyper-parameter Tuning
-- See [Cross-validation and hyper-parameter tuning notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T4_cross_validation.md)
+- Discussion of assignment \#2
+- See [Cross-validation and hyper-parameter tuning notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T5_cross_validation.md)
+- Check video [Complete guide to cross-validation](https://www.google.com/search?client=firefox-b-d&hs=M8F&sa=X&sca_esv=ea79f29eab3dedca&sxsrf=ANbL-n52glIguINYT9mbWgCjy-ZXtaWjdA:1774536555619&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Uy1yO4MtdEOyw56oQr4pD_xy9m9pUVOBFZgMYXBhoTkwcXjEVdjxilFCaKGaLRAsUSY7tYUnSuHswSwuSw_nQtstn67jn2dndqdLjdJqSsMbrfWlU84G5ZyyLRLuzVGbW-9LLuv7Kzh4BbLjrscozO5zF7IvkIOpYmvtpKowhIl1BVkcGzMW-SqCwtcoKLNPM3XrHgXAapOSBT9p3IE78H-RrEA&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpmAsnXCN5UBx17opt8eaTX5MJRoosnbembaWTjeNSquIxro2mrW6zffXrbXZY-opPXGY0Rt_bdDSE237xSnWdKR3dIcuWpVYnCh4I-6IiMCln65mNNN2yH1ysO3lP5K7J78yX6_da8m1AE3qAXevBHCVFtwF3sLVw9ZzZFWqV0P01yhOM&q=Cross+validation+with+sklearn+tutorial&ved=2ahUKEwiloafo572TAxXXxgIHHb9KCtsQtKgLegQIEBAB&biw=1536&bih=769&dpr=2.5#fpstate=ive&ip=1&vld=cid:077c95e2,vid:-8s9KuNo5SA,st:0) 12:40-end. Note that the dataset used for this tutorial is the "Stroke prediction data" where one of the features is the patient's doctor. This information is important because individuals should be *grouped* according to this feature.
 - Streamlining workflows with pipelines
 - Using k-fold cross-validation to assess model performance
 - Debugging algorithms with learning and validation curves
 - Fine-tuning machine learning models via grid search
-- Moodle quiz on basic concepts for ML: [Practical Machine Learning](https://elearning.ulisboa.pt/course/view.php?id=10469)
 </details>
 
+---
+
 <details markdown="block">
-<summary>  Evaluation metrics (Apr 4, 2025): confusion matrix, precision, recall, F1-score, ROC curve, AUC </summary>
+<summary> 6. Evaluation metrics (Apr 10, 2026): confusion matrix, precision, recall, F1-score, ROC curve, AUC </summary>
 
 - See (Raschka et al, 2022), Chapter 6: Learning Best Practices for Model Evaluation and hyper-parameter Tuning
-- See [Cross-validation and hyper-parameter tuning notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T4_cross_validation.md)
-- Looking at different performance evaluation metrics
-- Reading a confusion matrix 
-- Optimizing the precision and recall of a classification model
-- Plotting a receiver operating characteristic (ROC)
+- Revise pipelines, train vs test -- see diagram (https://github.com/isa-ulisboa/greends-pml/blob/main/docs/holdout_method_fig62.png)
+- See notes on  [Evaluating performance](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T6_evaluate_accuracy.md)
+- Complete exercise [spanish white wines high ratings](https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/spanish_white_wine_high_ratings.ipynb)
+- Suggestion: check video on [Evaluation Metrics For Classification - Full Overview](https://www.youtube.com/watch?v=pGPiRRfNsr0)
+- See [binary classification metrics table](https://en.wikipedia.org/wiki/Template:Diagnostic_testing_diagram): confusion matrix and derived metrics
+- Receiver operating characteristic curve, also known as relative operating characteristic curve (ROC) and precion-recall curves
 - Scoring metrics for multiclass classification 
 - Dealing with class imbalance
-- Discussion of assignment \#2
 
 </details>
 
+---
+
 <details markdown="block">
-<summary>  Combining Different Models for Ensemble Learning (May 2, 2025): random forest, gradient boosting, variable importance </summary>
+<summary>  7. Combining Different Models for Ensemble Learning (April 24, 2025): random forest, gradient boosting, variable importance </summary>
 
 - See (Raschka et al, 2022), Chapter 7:  Combining Different Models for Ensemble Learning
+
+<!---
+
+
 - See [Notes on ensemble learning and variable importance](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T5_ensemble_methods.md)
 - Ensemble classifiers
 - Random Forests
