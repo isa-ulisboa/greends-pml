@@ -204,7 +204,7 @@ The goal of the following classes is to understand how ML models can be trained 
 <details markdown="block">
 <summary>5. Model Evaluation and hyper-parameter Tuning (Mar 27, 2026): cross-validation, strata and groups, grid-search </summary>
 
-- See (Raschka et al, 2022), Chapter 6: Learning Best Practices for Model Evaluation and hyper-parameter Tuning
+- See (Raschka et al, 2022), Chapter 6: Learning Best Practices for Model Evaluation and hyper-parameter tuning
 - Discussion of assignment \#2
 - See [Cross-validation and hyper-parameter tuning notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T5_cross_validation.md)
 - Check video [Complete guide to cross-validation](https://www.google.com/search?client=firefox-b-d&hs=M8F&sa=X&sca_esv=ea79f29eab3dedca&sxsrf=ANbL-n52glIguINYT9mbWgCjy-ZXtaWjdA:1774536555619&uds=ALYpb_ncDc7jTlmw6Mmq7NjuX5c-Uy1yO4MtdEOyw56oQr4pD_xy9m9pUVOBFZgMYXBhoTkwcXjEVdjxilFCaKGaLRAsUSY7tYUnSuHswSwuSw_nQtstn67jn2dndqdLjdJqSsMbrfWlU84G5ZyyLRLuzVGbW-9LLuv7Kzh4BbLjrscozO5zF7IvkIOpYmvtpKowhIl1BVkcGzMW-SqCwtcoKLNPM3XrHgXAapOSBT9p3IE78H-RrEA&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpmAsnXCN5UBx17opt8eaTX5MJRoosnbembaWTjeNSquIxro2mrW6zffXrbXZY-opPXGY0Rt_bdDSE237xSnWdKR3dIcuWpVYnCh4I-6IiMCln65mNNN2yH1ysO3lP5K7J78yX6_da8m1AE3qAXevBHCVFtwF3sLVw9ZzZFWqV0P01yhOM&q=Cross+validation+with+sklearn+tutorial&ved=2ahUKEwiloafo572TAxXXxgIHHb9KCtsQtKgLegQIEBAB&biw=1536&bih=769&dpr=2.5#fpstate=ive&ip=1&vld=cid:077c95e2,vid:-8s9KuNo5SA,st:0) 12:40-end. Note that the dataset used for this tutorial is the "Stroke prediction data" where one of the features is the patient's doctor. This information is important because individuals should be *grouped* according to this feature.
@@ -234,81 +234,86 @@ The goal of the following classes is to understand how ML models can be trained 
 ---
 
 <details markdown="block">
-<summary>  7. Combining Different Models for Ensemble Learning (April 24, 2025): random forest, gradient boosting, variable importance </summary>
+<summary>  7. Combining Different Models for Ensemble Learning (April 24, 2026): random forest, gradient boosting, variable importance </summary>
 
 - See (Raschka et al, 2022), Chapter 7:  Combining Different Models for Ensemble Learning
-
-<!---
-
-
-- See [Notes on ensemble learning and variable importance](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T5_ensemble_methods.md)
+- See [Notes and examples on ensemble learning and variable importance](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T7_ensemble_methods.md)
 - Ensemble classifiers
 - Random Forests
-- Gradient boosting
+- Gradient boosting and XGBoost
 - Exercise: adapt the classification pipeline to apply the XGBoost classifier (Montesinho burned area data set)
-- Variable importance: MDI (Gini importance) and MDA (permutation importance)
-- Pipeline that includes feature selection, followed by hyperparameter search: https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/wine_region_pipeline_XGB_CV_gridsearch_featselection.ipynb
+- Variable importance: MDI (Gini importance) and  MDA (permutation importance) for Random Forest; SHAP for generic ML models.
+<!--- - Pipeline that includes feature selection, followed by hyperparameter search: https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/wine_region_pipeline_XGB_CV_gridsearch_featselection.ipynb --->
 
 </details>
 
+---
 
 <details markdown="block">
-<summary> Backpropagation (Mar 7, 2025): SGD, forward pass, backward pass, PyTorch, optimizer, ... </summary>
+<summary> 8. Introduction to deep learning; data pipeline with PyTorch (May 8, 2026):  datasets, dataloaders</summary>
 
-
-- Video on the Perceptron and early times of AI [The First Neural Networks](https://www.youtube.com/watch?v=e5dVSygXbAE&t=88s)
-- See (Raschka et al, 2022), Chapter 2: Training Simple Machine Learning Algorithms for Classification
-- See [Basic concepts notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T1_basic_concepts.md). 
-- Revise solutions for the problems listed in the previous class.
-- Backpropagation and computation graph
-- `PyTorch` pipeline: loss, optimizer
-- The following table illustrates the changes from a basic Python script which is dependent on the model, loss, etc,  to a PyTorch higher-level script that can easily generalized to other models, loss functions or optimizer strategies.
-
-| Basic Python | PyTorch 
-|---|---
-| Define model explicitly | Use a pre-defined model
-|`def predict(x):`|`torch.nn.Linear(in_size,out_size)`
-| Define loss explicitly | Use a pre-defined loss function
-|`def loss(y,y_pred):`|`loss=torch.nn.MSEloss(y,y_pred)`
-| Loss optimization strategy | Use a pre-defined optimizer
-| Code explicitly| `optimizer=torch.optim.SGD(params, learn_rate)`
-| Compute *ad hoc* gradient | **Use built-in backpropagation mechanism**
-|`def gradient(x,y,y_pred):`|`loss.backward()`
-|Update weights explicitly| `optimizer.step()`
+- Videos on the history of neural networks: Video on the Perceptron and early times of AI [The First Neural Networks](https://www.youtube.com/watch?v=e5dVSygXbAE&t=88s); Video on [ChatGPT is made from 100 million of these [The Perceptron]](https://www.youtube.com/watch?v=l-9ALe3U-Fg)
+- See (Raschka et al, 2022), Chapter 2: Training Simple Machine Learning Algorithms for Classification; review [Basic concepts notes](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T1_basic_concepts.md) for some fundamentals about ML that also apply to deep learning, and also Chapter 12: Parallelizing Network Training with PyTorch.
+- Introduction to neural networks. See video [But what is a neural network? | Deep learning chapter 1, from 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) on deep learning with an example of a fully connected neural network with two hidden layers for handwritten digit recognition.
+- General `PyTorch` pipeline: see [illustration of a PyTorch workflow](https://raw.githubusercontent.com/mrdbourke/pytorch-deep-learning/main/images/01_a_pytorch_workflow.png)
+- See [Notebook on introduction to data pipelines for deep learning](https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/T8_pytorch_dataset_dataloader.ipynb). With deep learning (DL), it is possible to solve problems that involve complex input data like images, text and audio. The first step in order to apply DL is to organize the input data. PyTorch provides some key tools like `Dataset` and `DataLoader` that allow the creation of robust pipelines for DL.
+- Assignment 3, available on Moodle. Explore in particular the concepts of `Dataset` and `Dataloader` in that notebook.
 
 </details>
 
+---
 
 <details markdown="block">
-<summary> Data pipeline for deep learning  (May 9, 2025):  PyTorch, datasets, dataloaders</summary>
+<summary> 9. Neural networks (May 15, 2026): backpropagation, gradient descent, forward pass, backward pass,  optimizer, ... </summary>
+  
+- See (Raschka et al, 2022), Chapter 12: pp 389 to the end,  and Chapter 13: Going Deeper – The Mechanics of PyTorch, namely the MNIST project (ppp 436-439)
+- In Google Colab or some other platform, prompt the AI bot with "Create a PyTorch script to train a fully connected neural network for the MNIST data set". Analyze the proposed script.
+- See [Notebook the typical pipeline for deep learning with (non-convolutional) neural networks](https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/T9_torch_NN_pipeline_MNIST88.ipynb) that explores and discusses a PyTorch pipeline for applying a (non convolutional) NN to the MNIST data set and validate results.
+- Video suggestions:
+  - [PyTorch Crash Course - Getting Started with Deep Learning (50')](https://www.youtube.com/watch?v=OIenNRt2bjg). Detailed discussion of PyTorch Deep Learning framework with simple examples.
+00:00 Intro & Overview
+00:54 Installation & Overview; 
+02:37 Tensor Basics; 
+11:14 Autograd; 
+17:41 Linear Regression Autograd; 
+20:59 Model, Loss & Optimizer; 
+27:11 Neural Network; 
+38:08 Convolutional Neural Net. Application: image classification CIFAR10 data set (objects color images).
+  
+  - [Build Your First Pytorch Model In Minutes: Tutorial + Code](https://www.youtube.com/watch?v=tHL5STNJKag).
+    00:00 Intro; 
+04:50 Pytorch Datasets; 
+13:59 Pytorch Model (EfficientNet, with added FC layer); 
+19:19 Pytorch Training; 
+29:23 Results. The application is image classification (recognize playing cards). Note that this example illustrates the idea of *transfer learning*.
 
-- See (Raschka et al, 2022), Chapter 12:   Parallelizing Neural Network Training with PyTorch
-- See [Notebook on introduction to data pipelines for deep learning](https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/T6_pytorch_dataset_dataloader.ipynb). With deep learning (DL), it is possible to solve problems that involve complex input data like images, text and audio. The first step in order to apply DL is to organize the input data. PyTorch provides some key tools like `Dataset` and `DataLoader` that allow the creation of robust pipelines for DL.
-- See [Veritasium video (3'42 to 14'50)](https://www.youtube.com/watch?v=GVsUOuSjvcg) for an historic introduction to multilayer neural networks  for deep learning.
-- Run an interpret the code in pages 386-388 with an example of a dataset (`CelebA`) with several labels.
+  - [PyTorch basic concepts](https://www.youtube.com/watch?v=r1bquDz5GGA). This video describes basic concepts and constructs from PyTorch in a clear way. 
+0:00:00 - Introduction
+0:01:55 - torch.tensor; 
+0:07:32 - Autograd & requires_grad; 
+0:09:21 - Computation Graph & .grad_fn; 
+0:12:50 - Element-wise vs. Matrix Multiplication; 
+0:15:25 - Reduction Operations & The dim Argument; 
+0:30:25 - loss.backward(); 
+0:34:12 - Gradient Descent Update Rule; 
+0:40:23 - torch.nn.Module; 
+0:52:19 - torch.optim; 
+0:57:30 - Transformer Feed-Forward Network; 
+
+- Notes on [Computing gradients in PyTorch](https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T8_computing_gradients_with_pytorch.md) with links to videos on *Backpropagation* and  *Gradient Descent with Autograd and Backpropagation*.
   
 </details>
 
+---
 
 <details markdown="block">
-<summary> Pipeline for deep learning with PyTorch (May 16, 2025):  data, model, model training and validation</summary>
-
-- See (Raschka et al, 2022), Chapter 12: pp 389 to the end,  and Chapter 13: Going Deeper – The Mechanics of PyTorch, namely the MNIST project (ppp 436-439)
-- See [Notebook the typical pipeline for deep learning with (non-convolutional) neural networks](https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/T7_torch_NN_pipeline.ipynb). In particular, we explore the MNIST dataset.
-- Assignment #3 available on Moodle
-- Suggestions of videos:
-  - [PyTorch Course (2022), Part 4: Image Classification (MNIST)](https://www.youtube.com/watch?v=gBw0u_5u0qU)
-  - [PyTorch Crash Course - Getting Started with Deep Learning](https://www.youtube.com/watch?v=OIenNRt2bjg)
-  - [Build Your First Pytorch Model In Minutes! [Tutorial + Code](https://www.youtube.com/watch?v=tHL5STNJKag)
-  - [MIT Introduction to Deep Learning 2025 (1:09)](https://www.youtube.com/watch?v=alfdI7S6wCY); Introduction up to "What is Deep Learning" (10'57); Why deep learning and why now (15'06); Building Neural Networks with Perceptrons (27'13); Applying NNs (35'30); Training NNs (41'21); NN in practice: Optimization (48'05).
-    
-</details>
-
-<details markdown="block">
-<summary> Deep convolutional neural networks  (May 23, 2025): input preparation, convolution, model architecture, receptive field </summary>
+<summary> 10. Deep convolutional neural networks  (May 22, 2026): input preparation, convolution, model architecture, receptive field </summary>
 
 - See (Raschka et al, 2022), Chapter 14: Classifying Images with Deep Convolutional Neural Networks
 - Check introductory video [What are CNNs?, by IBM (6'20)](https://www.youtube.com/watch?v=QzY57FaENXg)
+
+<!---
+
 - See [Notebook on introduction convolutional neural networks](https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/T9_CNNs_for_image_classification.ipynb). 
 - Application of CNNs to the MNIST problem.
 - Some techniques to improve deep learning: regularization, dropout, self-regularized activation functions, momentum, adaptive optimization. See https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/T8_techniques_to_improve_DP.ipynb

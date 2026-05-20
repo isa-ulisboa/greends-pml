@@ -79,7 +79,7 @@ Random forests are ensemble learning methods that involve:
   
   For simplicity, let's consider regression trees and show that the goal of ensembling trees with random forests is reducing the variance. 
   
-  Let  $X_i$ be  the random variable  that represents the predition for the regression tree $T_i$ from the collection, with $\rho={\rm cor}[X_i,X_j]$ being the correlation between $X_i$ and $X_j$. The prediction from the ensemble is
+  Let  $X_i$ be  the random variable  that represents the predition for the regression tree $T_i$ from the collection, with $\rho={\rm cor}\[X_i,X_j\]$ being the correlation between $X_i$ and $X_j$. The prediction from the ensemble is
   
   $$\bar{X}=\frac{1}{n} \left( X_1+\dots+X_B \right)$$
   
@@ -87,7 +87,7 @@ Random forests are ensemble learning methods that involve:
   
   $${\rm Var}[\bar{X}]=  \rho \\, \sigma^2 + \frac{1-\rho}{B} \sigma^2,$$
   
-  where ${\rm Var}[X-i]=\sigma^2$ and $B$ is the number of bootstrap samples. *As long as $\rho$ does not grow with $B$*, which is why the trees are decorrelated, using a larger ensemble will increase $B$ and reduce ${\rm Var}[\bar{X}]$, which is the goal of ensembling estimators.
+  where ${\rm Var}[X-i]=\sigma^2$ and $B$ is the number of bootstrap samples. **As long as $\rho$ does not grow with $B$**, which is why the trees are decorrelated, using a larger ensemble will increase $B$ and reduce ${\rm Var}[\bar{X}]$, which is the goal of ensembling estimators.
   
   ---
   
@@ -195,7 +195,9 @@ base learners based on their overall predictive performance.
 
 **AdaBoost** is a *dependent* ML method since each tree is an improvement over previous trees in the sequence. This is the opposite of *random forests* where the tree are grown independently.
 
-For clear details and nice illustrations, see https://medium.com/towards-data-science/adaboost-classifier-explained-a-visual-guide-with-code-examples-fc0f25326d7b
+<! ---See [What is adaboost: a friendly explanation](https://www.youtube.com/watch?v=AtYN8QP-U6w) for a clear and very simple example that shows how the weights is each weak learner are calculated. 
+
+For clear details and nice illustrations, see https://medium.com/towards-data-science/adaboost-classifier-explained-a-visual-guide-with-code-examples-fc0f25326d7b--->
 
 </details>
 
@@ -230,6 +232,8 @@ For clear details and nice illustrations, see https://medium.com/towards-data-sc
 
 Gradient Boost is also a *dependent* method, since each tree is an improvement of the earlier trees. Gradient Boost provides a framework to build an ensemble of trees based on an arbitrary loss function. In Gradient Boosting, each new tree is computed using a **simple classifier** (also called weak inducer, that just performs better than random) over the **residuals** from the previous model.
 
+You can find a brief and informal description of the ideas behind gradient boosting at [Visual Guide to Gradient Boosted Trees (xgboost), 5'](https://www.youtube.com/watch?v=TyvYZ26alZs) (uses *MNIST data set*) and a nice and brief description of the maths of gradient boosting at [Gradient Boosting : Data Science's Silver Bullet (15')](https://www.youtube.com/watch?v=en2bmeB4QUo)
+
 For details and very nice illustrations, look at the two following posts:
 
 1. [Regression](https://towardsdatascience.com/all-you-need-to-know-about-gradient-boosting-algorithm-part-1-regression-2520a34a502)
@@ -261,7 +265,11 @@ For details and very nice illustrations, look at the two following posts:
 
 <details markdown="block">
 
-<summary> Exercise with the XGboost classifier </summary>
+<summary> The XGboost classifier, and an exercise </summary>
+
+XGBoost introduces L1/L2 regularization to prevent overfitting, uses parallel processing for speed, handles missing values natively, and employs advanced tree pruning for better performance. In particular, XGBoost has built-in "sparsity-aware" techniques to automatically handle missing data, whereas standard gradient boosting requires preprocessing to handle missing values. XGBoost is engineered to handle large, complex datasets through cache-aware prefetching and out-of-core computing for data that doesn't fit in memory. 
+
+Check the introductory video on [Complete Beginners Guide to XGBoost Models](https://www.youtube.com/watch?v=BJXt-WdeJJo). It uses the *iris data set* as an example.
 
 Consider the Montesinho burned area data set described in https://github.com/isa-ulisboa/greends-pml/blob/main/docs/T3_missing_data_categorical_scaling.md. The goal is to predict the variable `y` which has been discretized: y is 0 when the burned area is lower than 5 ha and it is 1 otherwise.
 
@@ -276,12 +284,15 @@ Consider the Montesinho burned area data set described in https://github.com/isa
 <details markdown="block">
 <summary> Variable importance</summary>
 
-## Variable importance
+## Interpretability and Variable importance
 
-Since interpretability is a concept difficult to define precisely, people eager to gain
-insights about the driving forces at work behind random forests predictions often focus
-on variable importance, a measure of the influence of each input variable to predict
-the output [Scornet, 2021](https://arxiv.org/pdf/2001.04295). In Breiman (2001) original random forests, there exist two importance
+**Interpretability** is critically important in machine learning, acting as the bridge between high-performing algorithms and human trust, safety, and understanding. 
+Since interpretability is a concept difficult to define precisely, people focus  on **variable importance**, a measure of the influence of each input feature to predict
+the output. 
+
+### Variable importance in random forests
+
+Let's start with a particular family of models: trees and forests [Scornet, 2021](https://arxiv.org/pdf/2001.04295).  In Breiman (2001) original random forests, there exist two importance
 measures:
 
 1. **Mean Decrease Impurity**, MDI, or Gini importance, see Breiman (2002),
@@ -291,8 +302,7 @@ which sums up the gain associated to all splits performed along a given variable
 which shuffles entries of a specific variable in the test data set and computes the
 difference between the error on the permuted test set and the original test set.
 
-Because
-of its very definition, MDI is an importance measure that can be computed for trees
+Because of its very definition, MDI is an importance measure that can be computed for trees
 only, since it strongly relies on the tree structure, whereas MDA is an instantiation of
 the permutation importance that can be used for any predictive model. Both measures
 are used in practice even if they possess several major drawbacks.
@@ -301,6 +311,7 @@ are used in practice even if they possess several major drawbacks.
 MDI exhibits empirical bias towards variables that possess a category having a high frequency. MDI is also biased in presence of correlated features.
 
 - **MDA** seems to exhibit less bias than MDI but tends to overestimate correlated features. 
+
 
 **Exercise**: run and adapt scripts below to answer to the questions on the interpretation and comparision of MDI and MDA
 
@@ -313,6 +324,13 @@ MDI exhibits empirical bias towards variables that possess a category having a h
 - Compare MDI and permutation importance (MDA) for features which are highly correlated
 - Try removing features with high importance and compute importance again to see the effect on the remaining features
 - Conclude that importance is relative: one feature can be very important or not depending on the remaining features
+
+### Variable importance in generic ML models: SHAP
+
+There is  great interest in sound importance measures that can be applied to any ML model. **SHAP** (SHapley Additive exPlanations) is a game-theoretic approach to explain the output of any machine learning model by quantifying the contribution of each feature to individual predictions. It assigns an importance value (Shapley value) to each feature, representing how much it moves the model output from the average prediction. 
+
+Check [Explainable AI explained! | #4 SHAP](https://www.youtube.com/watch?v=9haIOplEIGM) for a short and clear explanation on how SHAP works. The SHAP package provides many useful visualizations tools.
+
 
 ---
 
