@@ -350,9 +350,10 @@ The goal of the following classes is to understand how ML models can be trained 
 <details markdown="block">
 <summary> 12. Foundation models and transfer learning  (June 5, 2026): types of ML problems and approaches, pre-trained models, fine-tuning</summary>
 
+-  Textbook (Raschka et al, 2022): search *fine-tuning* in Chapters 6, 11 and 16. Chapter 16 is the one where the concepts for this class are discussed in more detail. However, Chapter 16 deals with large language models (LLM) and the transformer architecture, which has not been discussed in detail in class. Nevertheless, the idea or using a pre-trained model (possibly a foundation model) and fine-tuning it is valid for any kind of model.
 - Check introductory video [Machine Learning vs. Deep Learning vs. Foundation Models, by IBM (7'27)](https://www.youtube.com/watch?v=Beh13Cd_QbY).
 - Check video on [Large Language Models explained briefly, by 3Blue1Brown](https://www.youtube.com/watch?v=LPZh9BOjkQs)
-- See (Raschka et al, 2022), search *fine-tuning* in Chapters 6, 11 and 16. Chapter 16 is the one where the concepts for this class are discussed in more detail. However, Chapter 16 deals with large language models (LLM) and the transformer architecture, which has not been discussed in detail in class. Nevertheless, the idea or using a pre-trained model (possibly a foundation model) and fine-tuning it is valid for any kind of model.
+- There are foundation models for specific areas of application. As an example, search for "Geospatial" in Hugging Face to list of available foundational models that have been trained with satellite imagery. For the same area of application, check [Google's Satellite Embedding V1](https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL) which provide ready to use deep features extracted from Earth observations for a wide range of earth observation applications.  
 - See notes about foundation models, fine-tuning and transfer learning: https://github.com/isa-ulisboa/greends-pml/blob/maindocs/T10_ML_fine_tuning_transfer_foundation_models.md
 - Notebook with the pipeline to load and adapt a pre-trained `resnet` model, freeze layers, and  fine-tune it:  https://github.com/isa-ulisboa/greends-pml/blob/main/notebooks/T10b_MNIST_resnet18_adapt_freeze_fine_tune.ipynb
 
