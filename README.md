@@ -12,7 +12,7 @@ Links for class resources:
   - [Moodle ULisboa](https://elearning.ulisboa.pt/). Evaluation: assignments. The course is called [Practical Machine Learning](https://elearning.ulisboa.pt/course/view.php?id=10469). Students need to self-register in the Moodle page for the course.
   - [Kaggle](https://www.kaggle.com/). Access to data; candidate problems for the final project.
 
-Some recommended tutorials:
+Some recommended video tutorials:
   - [Scikit-Learn ML basic tutorial](https://www.youtube.com/playlist?list=PLSE7WKf_qqo0lmPLmigvXDTDcKcGhre32). This covers the basics of using package `sklearn` for  ML, including basics, core terminology , linear regression, logistic regression, accuracy, preprocessing, and pipelines.
   - [Statistical Learning with Python - Stanford Online](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ). This is an introductory-level course in supervised learning, with a focus on regression and classification methods. The lectures cover all the material in An Introduction to Statistical Learning, with Applications in Python by James, Witten, Hastie, Tibshirani and Taylor (Springer, 2023).
   - [MIT Introduction to Deep Learning](https://www.youtube.com/watch?v=alfdI7S6wCY)
